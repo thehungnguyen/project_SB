@@ -17,6 +17,9 @@ public class UserSer {
     public User createUser(UserCreateReq req){
         User user = new User();
 
+        if(userRepo.existsByUsername(req.getUsername()))
+            throw new RuntimeException("User Exited.");
+
         user.setUsername(req.getUsername());
         user.setPassword(req.getPassword());
         user.setFirstName(req.getFirstName());

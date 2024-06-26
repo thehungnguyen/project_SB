@@ -4,6 +4,7 @@ import com.hungnt.project_SB.dto.request.UserCreateReq;
 import com.hungnt.project_SB.dto.request.UserUpdateReq;
 import com.hungnt.project_SB.entity.User;
 import com.hungnt.project_SB.service.UserSer;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ public class UserController {
     private UserSer userSer;
 
     @PostMapping
-    User createUser(@RequestBody UserCreateReq req){
+    User createUser(@RequestBody @Valid UserCreateReq req){
         return userSer.createUser(req);
     }
 
