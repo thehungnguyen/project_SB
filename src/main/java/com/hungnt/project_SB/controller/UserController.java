@@ -1,6 +1,6 @@
 package com.hungnt.project_SB.controller;
 
-import com.hungnt.project_SB.dto.request.ApiResponse;
+import com.hungnt.project_SB.dto.response.ApiResponse;
 import com.hungnt.project_SB.dto.request.UserCreateReq;
 import com.hungnt.project_SB.dto.request.UserUpdateReq;
 import com.hungnt.project_SB.entity.User;

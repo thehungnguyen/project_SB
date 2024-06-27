@@ -1,4 +1,4 @@
-package com.hungnt.project_SB.dto.request;
+package com.hungnt.project_SB.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
