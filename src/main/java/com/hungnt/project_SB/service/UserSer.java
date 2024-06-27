@@ -3,6 +3,8 @@ package com.hungnt.project_SB.service;
 import com.hungnt.project_SB.dto.request.UserCreateReq;
 import com.hungnt.project_SB.dto.request.UserUpdateReq;
 import com.hungnt.project_SB.entity.User;
+import com.hungnt.project_SB.exception.AppException;
+import com.hungnt.project_SB.exception.ErrorCode;
 import com.hungnt.project_SB.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +19,7 @@ public class UserSer {
     public User createUser(UserCreateReq req){
         User user = new User();
 
-        if(userRepo.existsByUsername(req.getUsername()))
-            throw new RuntimeException("User Exited.");
+        if(userRepo.existsByUsername(req.getUsername())) throw new AppException(ErrorCode.USER_EXISTED);
 
         user.setUsername(req.getUsername());
         user.setPassword(req.getPassword());
