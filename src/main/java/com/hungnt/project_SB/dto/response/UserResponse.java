@@ -1,15 +1,30 @@
-package com.hungnt.project_SB.dto.request;
-
-import jakarta.validation.constraints.Size;
+package com.hungnt.project_SB.dto.response;
 
 import java.time.LocalDate;
 
-public class UserUpdateReq {
-    @Size(min = 8, message = "PASSWORD_INVALID")
+public class UserResponse {
+    private String id;
+    private String username;
     private String password;
     private String firstName;
     private String lastName;
     private LocalDate dob;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public String getPassword() {
         return password;

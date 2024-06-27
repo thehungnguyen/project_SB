@@ -2,24 +2,25 @@ package com.hungnt.project_SB.service;
 
 import com.hungnt.project_SB.dto.request.UserCreateReq;
 import com.hungnt.project_SB.dto.request.UserUpdateReq;
+import com.hungnt.project_SB.dto.response.UserResponse;
 import com.hungnt.project_SB.entity.User;
 import com.hungnt.project_SB.exception.AppException;
 import com.hungnt.project_SB.exception.ErrorCode;
-import com.hungnt.project_SB.repository.UserRepo;
+import com.hungnt.project_SB.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class UserSer {
+public class UserService {
     @Autowired
-    private UserRepo userRepo;
+    private UserRepository userRepository;
 
     public User createUser(UserCreateReq req){
         User user = new User();
 
-        if(userRepo.existsByUsername(req.getUsername())) throw new AppException(ErrorCode.USER_EXISTED);
+        if(userRepository.existsByUsername(req.getUsername())) throw new AppException(ErrorCode.USER_EXISTED);
 
         user.setUsername(req.getUsername());
         user.setPassword(req.getPassword());
@@ -27,29 +28,29 @@ public class UserSer {
         user.setLastName(req.getLastName());
         user.setDob(req.getDob());
 
-        return userRepo.save(user);
+        return userRepository.save(user);
     }
 
     public List<User> getUser(){
-        return userRepo.findAll();
+        return userRepository.findAll();
     }
 
     public User getUser(String id){
-        return userRepo.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+        return userRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
     }
 
     public User updateUser(String userId, UserUpdateReq req){
-        User user = getUser(userId);
+        User user = userRepository.findById(userId).orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
 
         user.setPassword(req.getPassword());
         user.setFirstName(req.getFirstName());
         user.setLastName(req.getLastName());
         user.setDob(req.getDob());
 
-        return userRepo.save(user);
+        return userRepository.save(user);
     }
 
     public void deleteUser(String userId){
-        userRepo.deleteById(userId);
+        userRepository.deleteById(userId);
     }
 }
