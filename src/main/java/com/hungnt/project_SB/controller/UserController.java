@@ -27,7 +27,7 @@ public class UserController {
     }
 
     @GetMapping
-    ApiResponse<List<User>> getUser(){
+    ApiResponse<List<UserResponse>> getUser(){
         ApiResponse apiResponse = new ApiResponse();
         List<UserResponse> userResponses = new ArrayList<>();
         List<User> users = userService.getUser();

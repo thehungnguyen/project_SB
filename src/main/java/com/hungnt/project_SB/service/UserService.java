@@ -18,9 +18,9 @@ public class UserService {
     private UserRepository userRepository;
 
     public User createUser(UserCreateReq req){
-        User user = new User();
-
         if(userRepository.existsByUsername(req.getUsername())) throw new AppException(ErrorCode.USER_EXISTED);
+
+        User user = new User();
 
         user.setUsername(req.getUsername());
         user.setPassword(req.getPassword());
