@@ -1,5 +1,6 @@
 package com.hungnt.project_SB.controller;
 
+import com.hungnt.project_SB.dto.request.ApiResponse;
 import com.hungnt.project_SB.dto.request.UserCreateReq;
 import com.hungnt.project_SB.dto.request.UserUpdateReq;
 import com.hungnt.project_SB.entity.User;
@@ -17,8 +18,11 @@ public class UserController {
     private UserSer userSer;
 
     @PostMapping
-    User createUser(@RequestBody @Valid UserCreateReq req){
-        return userSer.createUser(req);
+    ApiResponse<User> createUser(@RequestBody @Valid UserCreateReq req){
+        ApiResponse<User> apiResponse = new ApiResponse<>();
+
+        apiResponse.setResult(userSer.createUser(req));
+        return apiResponse;
     }
 
     @GetMapping
