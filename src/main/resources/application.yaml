@@ -1,3 +1,6 @@
+jwt:
+  signerkey: "dDrAdtWaqgCiilX7V4z7uxZ6rU7vlbaTgj02FUswCkegR6H1TANcd5LipojaqhKN"
+
 server:
   port: 8888
 
