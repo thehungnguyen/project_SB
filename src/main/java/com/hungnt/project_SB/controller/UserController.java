@@ -7,7 +7,10 @@ import com.hungnt.project_SB.dto.response.UserResponse;
 import com.hungnt.project_SB.entity.User;
 import com.hungnt.project_SB.service.UserService;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -16,6 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/users")
 public class UserController {
+    private static final Logger log = LoggerFactory.getLogger(UserController.class);
     @Autowired
     private UserService userService;
 
@@ -28,6 +32,12 @@ public class UserController {
 
     @GetMapping
     ApiResponse<List<UserResponse>> getUser(){
+        // log user va role
+        var  authen = SecurityContextHolder.getContext().getAuthentication();
+        log.info("Username: {}", authen.getName());
+        authen.getAuthorities().forEach(grantedAuthority -> log.info(grantedAuthority.getAuthority()));
+
+        // Lay data roi truyen vao userResponses roi apiResponse.setResult
         ApiResponse apiResponse = new ApiResponse();
         List<UserResponse> userResponses = new ArrayList<>();
         List<User> users = userService.getUser();
@@ -36,10 +46,10 @@ public class UserController {
             UserResponse userResponse = new UserResponse();
             userResponse.setId(user.getId());
             userResponse.setUsername(user.getUsername());
-            userResponse.setPassword(user.getPassword());
             userResponse.setFirstName(user.getFirstName());
             userResponse.setLastName(user.getLastName());
             userResponse.setDob(user.getDob());
+            userResponse.setRoles(user.getRoles());
 
             userResponses.add(userResponse);
         }
@@ -52,6 +62,14 @@ public class UserController {
     ApiResponse<User> getUser(@PathVariable String userId){
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult(userService.getUser(userId));
+        return apiResponse;
+    }
+
+    // truyen token nhan thong tin ca nhan
+    @GetMapping("/myInfo")
+    ApiResponse<UserResponse> getMyInfo(){
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setResult(userService.getMyInfo());
         return apiResponse;
     }
 

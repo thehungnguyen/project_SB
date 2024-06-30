@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -17,6 +18,7 @@ public class User {
     private String firstName;
     private String lastName;
     private LocalDate dob;
+    private Set<String> roles;
 
     public String getId() {
         return id;
@@ -64,5 +66,13 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Set<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<String> roles) {
+        this.roles = roles;
     }
 }

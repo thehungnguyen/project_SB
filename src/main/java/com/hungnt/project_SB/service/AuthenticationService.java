@@ -4,6 +4,7 @@ import com.hungnt.project_SB.dto.request.AuthenticationRequest;
 import com.hungnt.project_SB.dto.request.VerifindTokenRequest;
 import com.hungnt.project_SB.dto.response.AuthenticationResponse;
 import com.hungnt.project_SB.dto.response.VerifindTokenResponse;
+import com.hungnt.project_SB.entity.User;
 import com.hungnt.project_SB.exception.AppException;
 import com.hungnt.project_SB.exception.ErrorCode;
 import com.hungnt.project_SB.repository.UserRepository;
@@ -23,13 +24,13 @@ import java.text.ParseException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
+import java.util.Set;
 
 @Service
 public class AuthenticationService {
     private static final Logger log = LoggerFactory.getLogger(AuthenticationService.class);
     @Autowired
     private UserRepository userRepository;
-
     @Value("${jwt.signerkey}")
     protected String SIGNER_KEY;
 
@@ -41,7 +42,7 @@ public class AuthenticationService {
 
         if(!authenticate) throw new AppException(ErrorCode.UNAUTHENTICATED);
         else{
-            var token = generateToken(authenticationRequest.getUsername());
+            var token = generateToken(user);
 
             AuthenticationResponse authenticationResponse = new AuthenticationResponse();
             authenticationResponse.setToken(token);
@@ -51,16 +52,22 @@ public class AuthenticationService {
         }
     }
 
-    private String generateToken(String username){
+    private String generateToken(User user){
         // header
         JWSHeader jwsHeader = new JWSHeader(JWSAlgorithm.HS512);
 
         // body
         JWTClaimsSet jwtClaimsSet = new JWTClaimsSet.Builder()
-                .subject(username) // nguoi dang nhap
-                .issuer("hung.nt") // nguoi tao token
-                .issueTime(new Date()) // thoi gian tao
-                .expirationTime(new Date(Instant.now().plus(1, ChronoUnit.HOURS).toEpochMilli())) // thoi gian het han
+                // nguoi dang nhap
+                .subject(user.getUsername())
+                // nguoi tao token
+                .issuer("hung.nt")
+                // role
+                .claim("scope", biuldScope(user))
+                // thoi gian tao
+                .issueTime(new Date())
+                // thoi gian het han
+                .expirationTime(new Date(Instant.now().plus(1, ChronoUnit.HOURS).toEpochMilli()))
                 .build();
 
         // payload
@@ -94,5 +101,17 @@ public class AuthenticationService {
         VerifindTokenResponse verifindTokenResponse = new VerifindTokenResponse();
         verifindTokenResponse.setValidToken(verified && expirationTime.after(new Date()));
         return verifindTokenResponse;
+    }
+
+    // do quy dinh trong oauth2 giua các role canh nhau bang " "
+    private String biuldScope(User user){
+        Set<String> rolesUser = user.getRoles();
+        String result = "";
+        if(!rolesUser.isEmpty()){
+            for(String s : rolesUser){
+                result += s + " ";
+            }
+        }
+        return result.trim();
     }
 }
