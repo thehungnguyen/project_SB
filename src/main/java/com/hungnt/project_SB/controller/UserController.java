@@ -33,7 +33,7 @@ public class UserController {
     @GetMapping
     ApiResponse<List<UserResponse>> getUser(){
         // log user va role
-        var  authen = SecurityContextHolder.getContext().getAuthentication();
+        var authen = SecurityContextHolder.getContext().getAuthentication();
         log.info("Username: {}", authen.getName());
         authen.getAuthorities().forEach(grantedAuthority -> log.info(grantedAuthority.getAuthority()));
 

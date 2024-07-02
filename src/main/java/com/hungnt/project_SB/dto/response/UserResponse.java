@@ -1,5 +1,7 @@
 package com.hungnt.project_SB.dto.response;
 
+import com.hungnt.project_SB.entity.Role;
+
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -9,7 +11,7 @@ public class UserResponse {
     private String firstName;
     private String lastName;
     private LocalDate dob;
-    private Set<String> roles;
+    private Set<Role> roles;
 
     public String getId() { return id; }
 
@@ -49,11 +51,11 @@ public class UserResponse {
         this.dob = dob;
     }
 
-    public Set<String> getRoles() {
+    public Set<Role> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<String> roles) {
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
 }

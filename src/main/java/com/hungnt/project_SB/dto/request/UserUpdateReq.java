@@ -3,6 +3,7 @@ package com.hungnt.project_SB.dto.request;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class UserUpdateReq {
     @Size(min = 8, message = "PASSWORD_INVALID")
@@ -10,6 +11,7 @@ public class UserUpdateReq {
     private String firstName;
     private String lastName;
     private LocalDate dob;
+    private List<String> roles;
 
     public String getPassword() {
         return password;
@@ -41,5 +43,13 @@ public class UserUpdateReq {
 
     public void setDob(LocalDate dob) {
         this.dob = dob;
+    }
+
+    public List<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<String> roles) {
+        this.roles = roles;
     }
 }

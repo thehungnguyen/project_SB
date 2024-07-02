@@ -7,6 +7,7 @@ import com.hungnt.project_SB.emuns.Role;
 import com.hungnt.project_SB.entity.User;
 import com.hungnt.project_SB.exception.AppException;
 import com.hungnt.project_SB.exception.ErrorCode;
+import com.hungnt.project_SB.repository.RoleRepository;
 import com.hungnt.project_SB.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,8 @@ public class UserService {
     private static final Logger log = LoggerFactory.getLogger(UserService.class);
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private RoleRepository roleRepository;
 //    @Autowired
 //    private PasswordEncoder passwordEncoder;
 
@@ -43,12 +46,13 @@ public class UserService {
         // Khoi tao role mac dinh khi tao user
         HashSet<String> roles = new HashSet<>();
         roles.add(Role.USER.name());
-        user.setRoles(roles);
+        //user.setRoles(roles);
 
         return userRepository.save(user);
     }
 
     @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasAuthority('CREATE_POST')")
     public List<User> getUser(){
         return userRepository.findAll();
     }
@@ -65,6 +69,9 @@ public class UserService {
         user.setFirstName(req.getFirstName());
         user.setLastName(req.getLastName());
         user.setDob(req.getDob());
+
+        var roles = roleRepository.findAllById(req.getRoles());
+        user.setRoles(new HashSet<>(roles));
 
         return userRepository.save(user);
     }

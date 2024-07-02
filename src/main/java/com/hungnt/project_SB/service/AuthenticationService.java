@@ -4,6 +4,8 @@ import com.hungnt.project_SB.dto.request.AuthenticationRequest;
 import com.hungnt.project_SB.dto.request.VerifindTokenRequest;
 import com.hungnt.project_SB.dto.response.AuthenticationResponse;
 import com.hungnt.project_SB.dto.response.VerifindTokenResponse;
+import com.hungnt.project_SB.entity.Permission;
+import com.hungnt.project_SB.entity.Role;
 import com.hungnt.project_SB.entity.User;
 import com.hungnt.project_SB.exception.AppException;
 import com.hungnt.project_SB.exception.ErrorCode;
@@ -13,16 +15,19 @@ import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
+import org.hibernate.sql.ast.tree.expression.Collation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Set;
 
@@ -105,13 +110,18 @@ public class AuthenticationService {
 
     // do quy dinh trong oauth2 giua các role canh nhau bang " "
     private String biuldScope(User user){
-        Set<String> rolesUser = user.getRoles();
         String result = "";
-        if(!rolesUser.isEmpty()){
-            for(String s : rolesUser){
-                result += s + " ";
+        Set<Role> rolesUser = user.getRoles();
+
+        for(Role r : rolesUser){
+            result += "ROLE_" + r.getName() + " ";
+            if(!CollectionUtils.isEmpty(r.getPermissions())){
+                for(Permission p : r.getPermissions()){
+                    result += p.getName() + " ";
+                }
             }
         }
+
         return result.trim();
     }
 }
