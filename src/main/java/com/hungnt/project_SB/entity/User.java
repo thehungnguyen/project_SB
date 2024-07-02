@@ -1,11 +1,9 @@
 package com.hungnt.project_SB.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -17,6 +15,9 @@ public class User {
     private String firstName;
     private String lastName;
     private LocalDate dob;
+
+    @ManyToMany
+    private Set<Role> roles;
 
     public String getId() {
         return id;
@@ -64,5 +65,13 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }

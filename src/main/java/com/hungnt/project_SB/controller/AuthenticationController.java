@@ -1,6 +1,8 @@
 package com.hungnt.project_SB.controller;
 
 import com.hungnt.project_SB.dto.request.AuthenticationRequest;
+import com.hungnt.project_SB.dto.request.LogoutRequest;
+import com.hungnt.project_SB.dto.request.RefreshTokenRequest;
 import com.hungnt.project_SB.dto.request.VerifindTokenRequest;
 import com.hungnt.project_SB.dto.response.ApiResponse;
 import com.hungnt.project_SB.dto.response.AuthenticationResponse;
@@ -33,7 +35,7 @@ public class AuthenticationController {
 
     @PostMapping("/verifindtoken")
     ApiResponse<VerifindTokenResponse> verification(@RequestBody VerifindTokenRequest verifindTokenRequest) throws ParseException, JOSEException {
-        var result = authenticationService.verifindToken(verifindTokenRequest);
+        var result = authenticationService.verifyToken(verifindTokenRequest);
 
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult(result);
@@ -41,4 +43,23 @@ public class AuthenticationController {
         return apiResponse;
     }
 
+    @PostMapping("/logout")
+    ApiResponse<String> logout(@RequestBody LogoutRequest logoutRequest) throws ParseException, JOSEException {
+        authenticationService.logout(logoutRequest);
+
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setResult("Account has been logged out");
+
+        return apiResponse;
+    }
+
+    @PostMapping("/refreshToken")
+    ApiResponse<AuthenticationResponse> refreshToken(@RequestBody RefreshTokenRequest refreshTokenRequest) throws ParseException, JOSEException {
+        var result = authenticationService.refreshToken(refreshTokenRequest);
+
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setResult(result);
+
+        return apiResponse;
+    }
 }
