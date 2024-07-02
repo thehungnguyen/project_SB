@@ -1,21 +1,24 @@
 package com.hungnt.project_SB.service;
 
 import com.hungnt.project_SB.dto.request.AuthenticationRequest;
+import com.hungnt.project_SB.dto.request.LogoutRequest;
+import com.hungnt.project_SB.dto.request.RefreshTokenRequest;
 import com.hungnt.project_SB.dto.request.VerifindTokenRequest;
 import com.hungnt.project_SB.dto.response.AuthenticationResponse;
 import com.hungnt.project_SB.dto.response.VerifindTokenResponse;
+import com.hungnt.project_SB.entity.InvalidToken;
 import com.hungnt.project_SB.entity.Permission;
 import com.hungnt.project_SB.entity.Role;
 import com.hungnt.project_SB.entity.User;
 import com.hungnt.project_SB.exception.AppException;
 import com.hungnt.project_SB.exception.ErrorCode;
+import com.hungnt.project_SB.repository.InvalidTokenRepository;
 import com.hungnt.project_SB.repository.UserRepository;
 import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
-import org.hibernate.sql.ast.tree.expression.Collation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,19 +26,20 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
-import java.util.Collections;
 import java.util.Date;
 import java.util.Set;
+import java.util.UUID;
 
 @Service
 public class AuthenticationService {
     private static final Logger log = LoggerFactory.getLogger(AuthenticationService.class);
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private InvalidTokenRepository invalidTokenRepository;
     @Value("${jwt.signerkey}")
     protected String SIGNER_KEY;
 
@@ -57,12 +61,42 @@ public class AuthenticationService {
         }
     }
 
+    public AuthenticationResponse refreshToken(RefreshTokenRequest refreshTokenRequest) throws ParseException, JOSEException {
+        // Kiem tra thoi gian hieu luc cua token
+        var signedJWT = signedJwtToken(refreshTokenRequest.getToken());
+
+        var idToken = signedJWT.getJWTClaimsSet().getJWTID();
+        var expiryTime = signedJWT.getJWTClaimsSet().getExpirationTime();
+
+        // Huy token cu ~ logout
+        InvalidToken invalidToken = new InvalidToken();
+        invalidToken.setId(idToken);
+        invalidToken.setExpiryTime(expiryTime);
+
+        invalidTokenRepository.save(invalidToken);
+
+        // Lay thong tin username tu token
+        var username = signedJWT.getJWTClaimsSet().getSubject();
+        var user = userRepository.findByUsername(username).orElseThrow(() -> new AppException(ErrorCode.UNAUTHENTICATED));
+
+        // Su dung generateToken de tao ra Token moi
+        var token = generateToken(user);
+
+        AuthenticationResponse authenticationResponse = new AuthenticationResponse();
+        authenticationResponse.setAuthenticated(true);
+        authenticationResponse.setToken(token);
+
+        return authenticationResponse;
+    }
+
     private String generateToken(User user){
         // header
         JWSHeader jwsHeader = new JWSHeader(JWSAlgorithm.HS512);
 
         // body
         JWTClaimsSet jwtClaimsSet = new JWTClaimsSet.Builder()
+                // token id
+                .jwtID(UUID.randomUUID().toString())
                 // nguoi dang nhap
                 .subject(user.getUsername())
                 // nguoi tao token
@@ -92,19 +126,19 @@ public class AuthenticationService {
         }
     }
 
-    public VerifindTokenResponse verifindToken(VerifindTokenRequest verifindTokenRequest) throws JOSEException, ParseException {
+    public VerifindTokenResponse verifyToken(VerifindTokenRequest verifindTokenRequest) throws ParseException, JOSEException {
         var token = verifindTokenRequest.getToken();
+        boolean isValid = true;
 
-        JWSVerifier jwsVerifier = new MACVerifier(SIGNER_KEY.getBytes());
-
-        SignedJWT signedJWT = SignedJWT.parse(token);
-
-        Date expirationTime = signedJWT.getJWTClaimsSet().getExpirationTime();
-
-        var verified = signedJWT.verify(jwsVerifier);
+        // Neu co loi AppException thi isValid = false
+        try {
+            var jwtToken = signedJwtToken(token);
+        } catch (AppException appException){
+            isValid = false;
+        }
 
         VerifindTokenResponse verifindTokenResponse = new VerifindTokenResponse();
-        verifindTokenResponse.setValidToken(verified && expirationTime.after(new Date()));
+        verifindTokenResponse.setValidToken(isValid);
         return verifindTokenResponse;
     }
 
@@ -123,5 +157,40 @@ public class AuthenticationService {
         }
 
         return result.trim();
+    }
+
+    public void logout(LogoutRequest logoutRequest) throws ParseException, JOSEException {
+        //Lay ra id token va thoi gian het han token
+        var signToken = signedJwtToken(logoutRequest.getToken());
+
+        String idJwt = signToken.getJWTClaimsSet().getJWTID();
+        Date expiryTime = signToken.getJWTClaimsSet().getExpirationTime();
+
+        InvalidToken invalidToken = new InvalidToken();
+        invalidToken.setId(idJwt);
+        invalidToken.setExpiryTime(expiryTime);
+
+        invalidTokenRepository.save(invalidToken);
+    }
+
+    private SignedJWT signedJwtToken(String token) throws JOSEException, ParseException {
+        // Xac thuc bang MACVerifier
+        JWSVerifier jwsVerifier = new MACVerifier(SIGNER_KEY.getBytes());
+
+        // Phan tich token
+        SignedJWT signedJWT = SignedJWT.parse(token);
+        // lay ra truong ExpiryTime
+        Date expirationTime = signedJWT.getJWTClaimsSet().getExpirationTime();
+        // Xac thuc so sanh giua SIGNER_KEY vs token client
+        var verified = signedJWT.verify(jwsVerifier);
+
+        // Neu token khong khop va het han thi tra ve exception Unauthenticated
+        if(!(verified && expirationTime.after(new Date()))) throw new AppException(ErrorCode.UNAUTHENTICATED);
+
+        // Neu token da trong danh sach logout thi
+        if(invalidTokenRepository.existsById(signedJWT.getJWTClaimsSet().getJWTID()))
+            throw new AppException(ErrorCode.UNAUTHENTICATED);
+
+        return signedJWT;
     }
 }
