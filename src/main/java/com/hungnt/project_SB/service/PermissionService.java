@@ -6,6 +6,7 @@ import com.hungnt.project_SB.dto.response.PermissionResponse;
 import com.hungnt.project_SB.entity.Permission;
 import com.hungnt.project_SB.repository.PermissionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public class PermissionService {
     @Autowired
     private PermissionRepository permissionRepository;
 
+    @PreAuthorize("hasRole('ADMIN')")
     public Permission createPermission(PermissionRequest permissionRequest){
         Permission permission = new Permission();
 
@@ -25,10 +27,12 @@ public class PermissionService {
         return permissionRepository.save(permission);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     public List<Permission> getAllPermission(){
         return permissionRepository.findAll();
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     public void deletePermission(String name){
         permissionRepository.deleteById(name);
     }

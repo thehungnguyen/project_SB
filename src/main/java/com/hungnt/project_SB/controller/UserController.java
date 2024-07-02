@@ -31,11 +31,11 @@ public class UserController {
     }
 
     @GetMapping
-    ApiResponse<List<UserResponse>> getUser(){
+    ApiResponse<List<UserResponse>> getUsers(){
         // log user va role
-        var authen = SecurityContextHolder.getContext().getAuthentication();
-        log.info("Username: {}", authen.getName());
-        authen.getAuthorities().forEach(grantedAuthority -> log.info(grantedAuthority.getAuthority()));
+//        var authen = SecurityContextHolder.getContext().getAuthentication();
+//        log.info("Username: {}", authen.getName());
+//        authen.getAuthorities().forEach(grantedAuthority -> log.info(grantedAuthority.getAuthority()));
 
         // Lay data roi truyen vao userResponses roi apiResponse.setResult
         ApiResponse apiResponse = new ApiResponse();
@@ -66,7 +66,7 @@ public class UserController {
     }
 
     // truyen token nhan thong tin ca nhan
-    @GetMapping("/myInfo")
+    @GetMapping("/myinfo")
     ApiResponse<UserResponse> getMyInfo(){
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult(userService.getMyInfo());

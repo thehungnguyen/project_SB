@@ -33,22 +33,22 @@ public class AuthenticationController {
         return apiResponse;
     }
 
-    @PostMapping("/verifindtoken")
-    ApiResponse<VerifindTokenResponse> verification(@RequestBody VerifindTokenRequest verifindTokenRequest) throws ParseException, JOSEException {
-        var result = authenticationService.verifyToken(verifindTokenRequest);
-
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setResult(result);
-
-        return apiResponse;
-    }
-
     @PostMapping("/logout")
     ApiResponse<String> logout(@RequestBody LogoutRequest logoutRequest) throws ParseException, JOSEException {
         authenticationService.logout(logoutRequest);
 
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult("Account has been logged out");
+
+        return apiResponse;
+    }
+
+    @PostMapping("/verifindtoken")
+    ApiResponse<VerifindTokenResponse> verification(@RequestBody VerifindTokenRequest verifindTokenRequest) throws ParseException, JOSEException {
+        var result = authenticationService.verifyToken(verifindTokenRequest);
+
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setResult(result);
 
         return apiResponse;
     }

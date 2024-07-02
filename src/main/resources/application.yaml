@@ -1,5 +1,7 @@
 jwt:
   signerkey: "dDrAdtWaqgCiilX7V4z7uxZ6rU7vlbaTgj02FUswCkegR6H1TANcd5LipojaqhKN"
+  valid-duration: 30
+  refreshable-duration: 120
 
 server:
   port: 8888
