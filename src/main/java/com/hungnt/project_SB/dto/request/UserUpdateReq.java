@@ -8,6 +8,7 @@ import java.util.List;
 public class UserUpdateReq {
     @Size(min = 8, message = "PASSWORD_INVALID")
     private String password;
+
     private String firstName;
     private String lastName;
     private LocalDate dob;

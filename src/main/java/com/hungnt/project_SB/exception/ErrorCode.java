@@ -11,7 +11,8 @@ public enum ErrorCode {
     PASSWORD_INVALID(4, "Password must be at least 8 characters", HttpStatus.BAD_REQUEST),
     USER_NOTFOUND(5, "User not found", HttpStatus.NOT_FOUND),
     UNAUTHENTICATED(6, "unauthenticated", HttpStatus.UNAUTHORIZED),
-    UNAUTHORIZED(7, "Access Denied", HttpStatus.FORBIDDEN)
+    UNAUTHORIZED(7, "Access Denied", HttpStatus.FORBIDDEN),
+    ROLE_NOTFOUND(8, "Role not found", HttpStatus.NOT_FOUND)
     ;
 
     private int code;

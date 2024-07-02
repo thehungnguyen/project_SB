@@ -3,7 +3,7 @@ package com.hungnt.project_SB.service;
 import com.hungnt.project_SB.dto.request.UserCreateReq;
 import com.hungnt.project_SB.dto.request.UserUpdateReq;
 import com.hungnt.project_SB.dto.response.UserResponse;
-import com.hungnt.project_SB.emuns.Role;
+import com.hungnt.project_SB.entity.Role;
 import com.hungnt.project_SB.entity.User;
 import com.hungnt.project_SB.exception.AppException;
 import com.hungnt.project_SB.exception.ErrorCode;
@@ -33,6 +33,7 @@ public class UserService {
 //    private PasswordEncoder passwordEncoder;
 
     public User createUser(UserCreateReq req){
+        // Tim trong DB da ton tai Username nay chua
         if(userRepository.existsByUsername(req.getUsername())) throw new AppException(ErrorCode.USER_EXISTED);
 
         User user = new User();
@@ -43,10 +44,10 @@ public class UserService {
         user.setLastName(req.getLastName());
         user.setDob(req.getDob());
 
-        // Khoi tao role mac dinh khi tao user
-        HashSet<String> roles = new HashSet<>();
-        roles.add(Role.USER.name());
-        //user.setRoles(roles);
+        // Set mac dinh role USER cho new User
+        HashSet<Role> roles = new HashSet<>();
+        Role userRole = roleRepository.findById("USER").orElseThrow(() -> new AppException(ErrorCode.ROLE_NOTFOUND));
+        roles.add(userRole);
 
         return userRepository.save(user);
     }
@@ -57,27 +58,9 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    @PostAuthorize("returnObject.username == authentication.name")
+    @PreAuthorize("hasRole('ADMIN')")
     public User getUser(String id){
         return userRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
-    }
-
-    public User updateUser(String userId, UserUpdateReq req){
-        User user = userRepository.findById(userId).orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
-
-        user.setPassword(req.getPassword());
-        user.setFirstName(req.getFirstName());
-        user.setLastName(req.getLastName());
-        user.setDob(req.getDob());
-
-        var roles = roleRepository.findAllById(req.getRoles());
-        user.setRoles(new HashSet<>(roles));
-
-        return userRepository.save(user);
-    }
-
-    public void deleteUser(String userId){
-        userRepository.deleteById(userId);
     }
 
     public UserResponse getMyInfo(){
@@ -97,4 +80,25 @@ public class UserService {
 
         return userResponse;
     }
+
+    @PostAuthorize("returnObject.username == authentication.name")
+    public User updateUser(String userId, UserUpdateReq req){
+        User user = userRepository.findById(userId).orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
+
+        user.setPassword(req.getPassword());
+        user.setFirstName(req.getFirstName());
+        user.setLastName(req.getLastName());
+        user.setDob(req.getDob());
+
+        var roles = roleRepository.findAllById(req.getRoles());
+        user.setRoles(new HashSet<>(roles));
+
+        return userRepository.save(user);
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    public void deleteUser(String userId){
+        userRepository.deleteById(userId);
+    }
+
 }
