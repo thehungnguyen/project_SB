@@ -197,7 +197,7 @@ public class AuthenticationService {
         // lay ra truong ExpiryTime
         // true -> refresh token; false -> verify for authenticate
         Date expirationTime = (isRefresh) ?
-                // Thoi gian cho phep refresh token
+                // Thoi gian con hieu luc de cho phep refresh token
                 new Date(signedJWT.getJWTClaimsSet().getIssueTime().toInstant()
                         .plus(REFRESHABLE_DURATION, ChronoUnit.SECONDS).toEpochMilli())
                 // Thoi gian song cua token
