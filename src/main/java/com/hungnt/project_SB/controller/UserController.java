@@ -24,9 +24,19 @@ public class UserController {
     private UserService userService;
 
     @PostMapping
-    ApiResponse<User> createUser(@RequestBody @Valid UserCreateReq req){
-        ApiResponse<User> apiResponse = new ApiResponse<>();
-        apiResponse.setResult(userService.createUser(req));
+    ApiResponse<UserResponse> createUser(@RequestBody @Valid UserCreateReq req){
+        ApiResponse apiResponse = new ApiResponse<>();
+        User user = userService.createUser(req);
+        UserResponse userResponse = new UserResponse();
+
+        userResponse.setId(user.getId());
+        userResponse.setUsername(user.getUsername());
+        userResponse.setFirstName(user.getFirstName());
+        userResponse.setLastName(user.getLastName());
+        userResponse.setDob(user.getDob());
+        userResponse.setRoles(user.getRoles());
+
+        apiResponse.setResult(userResponse);
         return apiResponse;
     }
 
