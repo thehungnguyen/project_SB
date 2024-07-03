@@ -48,6 +48,7 @@ public class UserService {
         HashSet<Role> roles = new HashSet<>();
         Role userRole = roleRepository.findById("USER").orElseThrow(() -> new AppException(ErrorCode.ROLE_NOTFOUND));
         roles.add(userRole);
+        user.setRoles(roles);
 
         return userRepository.save(user);
     }
