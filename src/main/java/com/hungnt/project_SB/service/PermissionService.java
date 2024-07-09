@@ -1,7 +1,6 @@
 package com.hungnt.project_SB.service;
 
 import com.hungnt.project_SB.dto.request.PermissionRequest;
-import com.hungnt.project_SB.dto.response.ApiResponse;
 import com.hungnt.project_SB.dto.response.PermissionResponse;
 import com.hungnt.project_SB.entity.Permission;
 import com.hungnt.project_SB.repository.PermissionRepository;
@@ -18,18 +17,32 @@ public class PermissionService {
     private PermissionRepository permissionRepository;
 
     @PreAuthorize("hasRole('ADMIN')")
-    public Permission createPermission(PermissionRequest permissionRequest){
+    public PermissionResponse createPermission(PermissionRequest permissionRequest){
         Permission permission = new Permission();
-
         permission.setName(permissionRequest.getName());
         permission.setDescription(permissionRequest.getDescription());
+        permissionRepository.save(permission);
 
-        return permissionRepository.save(permission);
+        PermissionResponse permissionResponse = new PermissionResponse();
+        permissionResponse.setName(permission.getName());
+        permissionResponse.setDescription(permission.getDescription());
+        return permissionResponse;
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    public List<Permission> getAllPermission(){
-        return permissionRepository.findAll();
+    public List<PermissionResponse> getAllPermissions(){
+        List<Permission> permissions = permissionRepository.findAll();
+        List<PermissionResponse> permissionResponses = new ArrayList<>();
+
+        for(Permission p : permissions){
+            PermissionResponse permissionResponse = new PermissionResponse();
+            permissionResponse.setName(p.getName());
+            permissionResponse.setDescription(p.getDescription());
+
+            permissionResponses.add(permissionResponse);
+        }
+
+        return permissionResponses;
     }
 
     @PreAuthorize("hasRole('ADMIN')")

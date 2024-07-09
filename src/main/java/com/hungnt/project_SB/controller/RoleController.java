@@ -19,35 +19,15 @@ public class RoleController {
 
     @PostMapping
     ApiResponse<RoleResponse> createRole(@RequestBody RoleRequest roleRequest){
-        Role role = roleService.createRole(roleRequest);
-        RoleResponse roleResponse = new RoleResponse();
         ApiResponse apiResponse = new ApiResponse();
-
-        roleResponse.setName(role.getName());
-        roleResponse.setDescription(role.getDescription());
-        roleResponse.setPermissions(role.getPermissions());
-
-        apiResponse.setResult(roleResponse);
+        apiResponse.setResult(roleService.createRole(roleRequest));
         return apiResponse;
     }
 
     @GetMapping
     public ApiResponse<List<RoleResponse>> getAllRole(){
-        List<Role> roles = roleService.getAllRole();
-        List<RoleResponse> roleResponses = new ArrayList<>();
         ApiResponse apiResponse = new ApiResponse();
-
-        for(Role r : roles){
-            RoleResponse roleResponse = new RoleResponse();
-
-            roleResponse.setName(r.getName());
-            roleResponse.setDescription(r.getDescription());
-            roleResponse.setPermissions(r.getPermissions());
-
-            roleResponses.add(roleResponse);
-        }
-
-        apiResponse.setResult(roleResponses);
+        apiResponse.setResult(roleService.getAllRoles());
         return apiResponse;
     }
 

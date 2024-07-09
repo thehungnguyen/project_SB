@@ -43,6 +43,7 @@ public class JwtDecoderCustom implements JwtDecoder {
         // Authentication Provider
         // Neu token con hieu luc thi su dung nimbusJwtDecoder de xac thuc
         if (Objects.isNull(nimbusJwtDecoder)) {
+            // tao SecretKey voi 1 thuat toan ma hoa
             SecretKeySpec secretKeySpec = new SecretKeySpec(signerKey.getBytes(), "HS512");
             nimbusJwtDecoder = NimbusJwtDecoder.withSecretKey(secretKeySpec)
                     .macAlgorithm(MacAlgorithm.HS512)

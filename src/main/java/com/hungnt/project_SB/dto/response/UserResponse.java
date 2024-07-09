@@ -1,6 +1,7 @@
 package com.hungnt.project_SB.dto.response;
 
 import com.hungnt.project_SB.entity.Role;
+import lombok.Builder;
 
 import java.time.LocalDate;
 import java.util.Set;
