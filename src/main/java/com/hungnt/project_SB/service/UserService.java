@@ -15,12 +15,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserService {
@@ -29,10 +28,8 @@ public class UserService {
     private UserRepository userRepository;
     @Autowired
     private RoleRepository roleRepository;
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
 
-    public User createUser(UserCreateReq req){
+    public UserResponse createUser(UserCreateReq req){
         // Tim trong DB da ton tai Username nay chua
         if(userRepository.existsByUsername(req.getUsername())) throw new AppException(ErrorCode.USER_EXISTED);
 
@@ -50,18 +47,54 @@ public class UserService {
         roles.add(userRole);
         user.setRoles(roles);
 
-        return userRepository.save(user);
+        userRepository.save(user);
+
+        UserResponse userResponse = new UserResponse();
+
+        userResponse.setId(user.getId());
+        userResponse.setUsername(user.getUsername());
+        userResponse.setFirstName(user.getFirstName());
+        userResponse.setLastName(user.getLastName());
+        userResponse.setDob(user.getDob());
+        userResponse.setRoles(user.getRoles());
+
+        return userResponse;
     }
 
     @PreAuthorize("hasRole('ADMIN')")
     //@PreAuthorize("hasAuthority('CREATE_POST')")
-    public List<User> getUser(){
-        return userRepository.findAll();
+    public List<UserResponse> getUsers(){
+        List<UserResponse> userResponses = new ArrayList<>();
+        List<User> users = userRepository.findAll();
+
+        for(User user : users){
+            UserResponse userResponse = new UserResponse();
+            userResponse.setId(user.getId());
+            userResponse.setUsername(user.getUsername());
+            userResponse.setFirstName(user.getFirstName());
+            userResponse.setLastName(user.getLastName());
+            userResponse.setDob(user.getDob());
+            userResponse.setRoles(user.getRoles());
+
+            userResponses.add(userResponse);
+        }
+
+        return userResponses;
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    public User getUser(String id){
-        return userRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
+    public UserResponse getUser(String id){
+        User user = userRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
+
+        UserResponse userResponse = new UserResponse();
+        userResponse.setId(user.getId());
+        userResponse.setUsername(user.getUsername());
+        userResponse.setFirstName(user.getFirstName());
+        userResponse.setLastName(user.getLastName());
+        userResponse.setDob(user.getDob());
+        userResponse.setRoles(user.getRoles());
+
+        return userResponse;
     }
 
     public UserResponse getMyInfo(){
@@ -83,7 +116,7 @@ public class UserService {
     }
 
     @PostAuthorize("returnObject.username == authentication.name")
-    public User updateUser(String userId, UserUpdateReq req){
+    public UserResponse updateUser(String userId, UserUpdateReq req){
         User user = userRepository.findById(userId).orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
 
         user.setPassword(req.getPassword());
@@ -94,7 +127,17 @@ public class UserService {
         var roles = roleRepository.findAllById(req.getRoles());
         user.setRoles(new HashSet<>(roles));
 
-        return userRepository.save(user);
+        userRepository.save(user);
+
+        UserResponse userResponse = new UserResponse();
+        userResponse.setId(user.getId());
+        userResponse.setUsername(user.getUsername());
+        userResponse.setFirstName(user.getFirstName());
+        userResponse.setLastName(user.getLastName());
+        userResponse.setDob(user.getDob());
+        userResponse.setRoles(user.getRoles());
+
+        return userResponse;
     }
 
     @PreAuthorize("hasRole('ADMIN')")
