@@ -12,6 +12,7 @@ import com.hungnt.project_SB.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -30,9 +31,6 @@ public class UserService {
     private RoleRepository roleRepository;
 
     public UserResponse createUser(UserCreateReq req){
-        // Tim trong DB da ton tai Username nay chua
-        if(userRepository.existsByUsername(req.getUsername())) throw new AppException(ErrorCode.USER_EXISTED);
-
         User user = new User();
 
         user.setUsername(req.getUsername());
@@ -47,7 +45,13 @@ public class UserService {
         roles.add(userRole);
         user.setRoles(roles);
 
-        userRepository.save(user);
+
+        // Tim trong DB da ton tai Username nay chua
+        try{
+            user = userRepository.save(user);
+        } catch (DataIntegrityViolationException e){
+            throw new AppException(ErrorCode.USER_EXISTED);
+        }
 
         UserResponse userResponse = new UserResponse();
 
@@ -65,6 +69,7 @@ public class UserService {
     //@PreAuthorize("hasAuthority('CREATE_POST')")
     public List<UserResponse> getUsers(){
         List<UserResponse> userResponses = new ArrayList<>();
+
         List<User> users = userRepository.findAll();
 
         for(User user : users){
@@ -105,6 +110,7 @@ public class UserService {
         User user = userRepository.findByUsername(name).orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
 
         UserResponse userResponse = new UserResponse();
+
         userResponse.setId(user.getId());
         userResponse.setUsername(user.getUsername());
         userResponse.setFirstName(user.getFirstName());
