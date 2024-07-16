@@ -28,6 +28,8 @@ public class UserController {
     ApiResponse<UserResponse> createUser(@RequestBody @Valid UserCreateReq req){
         ApiResponse apiResponse = new ApiResponse<>();
         apiResponse.setResult(userService.createUser(req));
+        // Neu Create User thanh cong -> xoa bo nho Redis
+        if(apiResponse.getCode() == 1000) userRedisService.clear();
         return apiResponse;
     }
 
@@ -64,20 +66,20 @@ public class UserController {
 
     @PutMapping("/{userId}")
     ApiResponse<UserResponse> updateUser(@PathVariable String userId, @RequestBody @Valid UserUpdateReq req){
-        // Xoa data trong Redis
-        userRedisService.clear();
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult(userService.updateUser(userId, req));
+        // Neu Update User thanh cong -> xoa bo nho Redis
+        if(apiResponse.getCode() == 1000) userRedisService.clear();
         return apiResponse;
     }
 
     @DeleteMapping("/{userId}")
     ApiResponse<String> deleteUser(@PathVariable String userId){
-        // Xoa data trong Redis
-        userRedisService.clear();
         userService.deleteUser(userId);
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult("User has been deleted");
+        // Neu Delete User thanh cong -> xoa bo nho Redis
+        if(apiResponse.getCode() == 1000) userRedisService.clear();
         return apiResponse;
     }
 }

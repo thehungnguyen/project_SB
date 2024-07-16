@@ -20,7 +20,7 @@ public class UserRedisService {
     private final RedisTemplate<String, Object> redisTemplate;
 
     //Key Redis
-    String key = "all_users";
+    private String key = "all_users";
 
     // Clear cache
     public void clear(){
