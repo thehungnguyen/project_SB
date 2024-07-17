@@ -25,9 +25,11 @@ public class UserController {
     private UserRedisService userRedisService;
 
     @PostMapping
-    ApiResponse<UserResponse> createUser(@RequestBody @Valid UserCreateReq req){
+    ApiResponse<UserResponse> createUser(@RequestBody @Valid UserCreateReq req) {
         ApiResponse apiResponse = new ApiResponse<>();
         apiResponse.setResult(userService.createUser(req));
+        // Neu Create User thanh cong -> xoa bo nho Redis
+        if (apiResponse.getCode() == 1000) userRedisService.clear();
         return apiResponse;
     }
 
@@ -38,7 +40,7 @@ public class UserController {
         // Kiem tra du lieu trong Redis
         List<UserResponse> userResponses = userRedisService.getAllUsers();
         // Neu trong redis khong co du lieu thi lay du lieu trong DB va luu vao Redis
-        if(userResponses.isEmpty()){
+        if (userResponses.isEmpty()) {
             userResponses = userService.getUsers();
             userRedisService.saveAllUsers(userResponses);
         }
@@ -48,7 +50,7 @@ public class UserController {
     }
 
     @GetMapping("/{userId}")
-    ApiResponse<UserResponse> getUser(@PathVariable String userId){
+    ApiResponse<UserResponse> getUser(@PathVariable String userId) {
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult(userService.getUser(userId));
         return apiResponse;
@@ -56,28 +58,28 @@ public class UserController {
 
     // truyen token nhan thong tin ca nhan
     @GetMapping("/myinfo")
-    ApiResponse<UserResponse> getMyInfo(){
+    ApiResponse<UserResponse> getMyInfo() {
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult(userService.getMyInfo());
         return apiResponse;
     }
 
     @PutMapping("/{userId}")
-    ApiResponse<UserResponse> updateUser(@PathVariable String userId, @RequestBody @Valid UserUpdateReq req){
-        // Xoa data trong Redis
-        userRedisService.clear();
+    ApiResponse<UserResponse> updateUser(@PathVariable String userId, @RequestBody @Valid UserUpdateReq req) {
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult(userService.updateUser(userId, req));
+        // Neu Update User thanh cong -> xoa bo nho Redis
+        if (apiResponse.getCode() == 1000) userRedisService.clear();
         return apiResponse;
     }
 
     @DeleteMapping("/{userId}")
-    ApiResponse<String> deleteUser(@PathVariable String userId){
-        // Xoa data trong Redis
-        userRedisService.clear();
+    ApiResponse<String> deleteUser(@PathVariable String userId) {
         userService.deleteUser(userId);
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult("User has been deleted");
+        // Neu Delete User thanh cong -> xoa bo nho Redis
+        if (apiResponse.getCode() == 1000) userRedisService.clear();
         return apiResponse;
     }
 }

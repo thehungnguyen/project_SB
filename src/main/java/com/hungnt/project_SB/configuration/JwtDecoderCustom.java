@@ -27,7 +27,7 @@ public class JwtDecoderCustom implements JwtDecoder {
     private NimbusJwtDecoder nimbusJwtDecoder = null;
 
     @Override
-    public Jwt decode(String token) throws JwtException{
+    public Jwt decode(String token) throws JwtException {
         // kiem tra token con Available khong
         try {
             VerifindTokenRequest verifindTokenRequest = new VerifindTokenRequest();

@@ -1,6 +1,6 @@
 package com.hungnt.project_SB.exception;
 
-public class AppException extends RuntimeException{
+public class AppException extends RuntimeException {
     private ErrorCode errorCode;
 
     public AppException(ErrorCode errorCode) {

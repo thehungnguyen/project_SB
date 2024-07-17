@@ -25,13 +25,13 @@ public class RedisConfig {
 
     // Ket noi toi Redis
     @Bean
-    public LettuceConnectionFactory redisConnectionFactory(){
+    public LettuceConnectionFactory redisConnectionFactory() {
         RedisStandaloneConfiguration configuration = new RedisStandaloneConfiguration(redisHost, redisPort);
         return new LettuceConnectionFactory(configuration);
     }
 
     @Bean
-    public RedisTemplate<String, Object> redisTemplate(){
+    public RedisTemplate<String, Object> redisTemplate() {
         RedisTemplate<String, Object> redisTemplate = new RedisTemplate();
 
         // Ket noi Redis
@@ -52,7 +52,7 @@ public class RedisConfig {
 
     // Chuyen doi doi tuong Java sang JSON va nguoc lai
     @Bean
-    public ObjectMapper redisObjectMapper(){
+    public ObjectMapper redisObjectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
         SimpleModule simpleModule = new SimpleModule();
 

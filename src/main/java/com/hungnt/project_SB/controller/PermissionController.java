@@ -16,21 +16,21 @@ public class PermissionController {
     private PermissionService permissionService;
 
     @PostMapping
-    public ApiResponse<PermissionResponse> createPermission(@RequestBody PermissionRequest permissionRequest){
+    public ApiResponse<PermissionResponse> createPermission(@RequestBody PermissionRequest permissionRequest) {
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult(permissionService.createPermission(permissionRequest));
         return apiResponse;
     }
 
     @GetMapping
-    public ApiResponse<List<PermissionResponse>> getAllPermission(){
+    public ApiResponse<List<PermissionResponse>> getAllPermission() {
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult(permissionService.getAllPermissions());
         return apiResponse;
     }
 
     @DeleteMapping("/{permissionName}")
-    public ApiResponse<String> deletePermission(@PathVariable String permissionName){
+    public ApiResponse<String> deletePermission(@PathVariable String permissionName) {
         permissionService.deletePermission(permissionName);
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult("Permission has been deleted");

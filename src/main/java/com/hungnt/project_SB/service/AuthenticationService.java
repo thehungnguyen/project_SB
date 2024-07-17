@@ -48,14 +48,14 @@ public class AuthenticationService {
     protected long REFRESHABLE_DURATION;
 
     // Dang nhap ~ Login
-    public AuthenticationResponse authenticate(AuthenticationRequest authenticationRequest){
+    public AuthenticationResponse authenticate(AuthenticationRequest authenticationRequest) {
         var user = userRepository.findByUsername(authenticationRequest.getUsername())
                 .orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
 
         boolean authenticate = authenticationRequest.getPassword().equals(user.getPassword());
 
-        if(!authenticate) throw new AppException(ErrorCode.UNAUTHENTICATED);
-        else{
+        if (!authenticate) throw new AppException(ErrorCode.UNAUTHENTICATED);
+        else {
             var token = generateToken(user);
 
             AuthenticationResponse authenticationResponse = new AuthenticationResponse();
@@ -68,7 +68,7 @@ public class AuthenticationService {
 
     // Dang xuat ~ Logout
     public void logout(LogoutRequest logoutRequest) throws ParseException, JOSEException {
-        try{
+        try {
             //Lay ra id token va thoi gian het han token
             var signToken = signedJwtToken(logoutRequest.getToken(), false);
 
@@ -80,13 +80,13 @@ public class AuthenticationService {
             invalidToken.setExpiryTime(expiryTime);
 
             invalidTokenRepository.save(invalidToken);
-        }catch (AppException exception){
+        } catch (AppException exception) {
             log.info("Token already expired");
         }
     }
 
     // Tao token
-    private String generateToken(User user){
+    private String generateToken(User user) {
         // header
         JWSHeader jwsHeader = new JWSHeader(JWSAlgorithm.HS512);
 
@@ -116,8 +116,7 @@ public class AuthenticationService {
         try {
             jwsObject.sign(new MACSigner(SIGNER_KEY.getBytes()));
             return jwsObject.serialize();
-        }
-        catch (JOSEException e){
+        } catch (JOSEException e) {
             log.error("Can't create token", e);
             throw new RuntimeException(e);
         }
@@ -131,7 +130,7 @@ public class AuthenticationService {
         // Neu co loi AppException thi isValid = false
         try {
             var jwtToken = signedJwtToken(token, false);
-        } catch (AppException appException){
+        } catch (AppException appException) {
             isValid = false;
         }
 
@@ -170,14 +169,14 @@ public class AuthenticationService {
     }
 
     // do quy dinh trong oauth2 giua các role canh nhau bang " "
-    private String biuldScope(User user){
+    private String biuldScope(User user) {
         String result = "";
         Set<Role> rolesUser = user.getRoles();
 
-        for(Role r : rolesUser){
+        for (Role r : rolesUser) {
             result += "ROLE_" + r.getName() + " ";
-            if(!CollectionUtils.isEmpty(r.getPermissions())){
-                for(Permission p : r.getPermissions()){
+            if (!CollectionUtils.isEmpty(r.getPermissions())) {
+                for (Permission p : r.getPermissions()) {
                     result += p.getName() + " ";
                 }
             }
@@ -207,10 +206,10 @@ public class AuthenticationService {
         var verified = signedJWT.verify(jwsVerifier);
 
         // Neu token khong khop va het han thi tra ve exception Unauthenticated
-        if(!(verified && expirationTime.after(new Date()))) throw new AppException(ErrorCode.UNAUTHENTICATED);
+        if (!(verified && expirationTime.after(new Date()))) throw new AppException(ErrorCode.UNAUTHENTICATED);
 
         // Neu token da trong danh sach logout thi
-        if(invalidTokenRepository.existsById(signedJWT.getJWTClaimsSet().getJWTID()))
+        if (invalidTokenRepository.existsById(signedJWT.getJWTClaimsSet().getJWTID()))
             throw new AppException(ErrorCode.UNAUTHENTICATED);
 
         return signedJWT;

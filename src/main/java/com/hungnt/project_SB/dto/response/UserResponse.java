@@ -14,7 +14,9 @@ public class UserResponse {
     private LocalDate dob;
     private Set<Role> roles;
 
-    public String getId() { return id; }
+    public String getId() {
+        return id;
+    }
 
     public void setId(String id) {
         this.id = id;

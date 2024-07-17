@@ -18,21 +18,21 @@ public class RoleController {
     private RoleService roleService;
 
     @PostMapping
-    ApiResponse<RoleResponse> createRole(@RequestBody RoleRequest roleRequest){
+    ApiResponse<RoleResponse> createRole(@RequestBody RoleRequest roleRequest) {
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult(roleService.createRole(roleRequest));
         return apiResponse;
     }
 
     @GetMapping
-    public ApiResponse<List<RoleResponse>> getAllRole(){
+    public ApiResponse<List<RoleResponse>> getAllRole() {
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult(roleService.getAllRoles());
         return apiResponse;
     }
 
     @DeleteMapping("/{roleName}")
-    public ApiResponse<String> deleteRole(@PathVariable String roleName){
+    public ApiResponse<String> deleteRole(@PathVariable String roleName) {
         roleService.deleteRole(roleName);
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setResult("Role has been deleted");
