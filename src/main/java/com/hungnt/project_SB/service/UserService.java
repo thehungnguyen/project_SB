@@ -30,7 +30,7 @@ public class UserService {
     @Autowired
     private RoleRepository roleRepository;
 
-    public UserResponse createUser(UserCreateReq req){
+    public UserResponse createUser(UserCreateReq req) {
         User user = new User();
 
         user.setUsername(req.getUsername());
@@ -47,9 +47,9 @@ public class UserService {
 
 
         // Tim trong DB da ton tai Username nay chua
-        try{
+        try {
             user = userRepository.save(user);
-        } catch (DataIntegrityViolationException e){
+        } catch (DataIntegrityViolationException e) {
             throw new AppException(ErrorCode.USER_EXISTED);
         }
 
@@ -67,12 +67,12 @@ public class UserService {
 
     @PreAuthorize("hasRole('ADMIN')")
     //@PreAuthorize("hasAuthority('CREATE_POST')")
-    public List<UserResponse> getUsers(){
+    public List<UserResponse> getUsers() {
         List<UserResponse> userResponses = new ArrayList<>();
 
         List<User> users = userRepository.findAll();
 
-        for(User user : users){
+        for (User user : users) {
             UserResponse userResponse = new UserResponse();
             userResponse.setId(user.getId());
             userResponse.setUsername(user.getUsername());
@@ -88,7 +88,7 @@ public class UserService {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    public UserResponse getUser(String id){
+    public UserResponse getUser(String id) {
         User user = userRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
 
         UserResponse userResponse = new UserResponse();
@@ -102,7 +102,7 @@ public class UserService {
         return userResponse;
     }
 
-    public UserResponse getMyInfo(){
+    public UserResponse getMyInfo() {
         // Lay username tu token
         var context = SecurityContextHolder.getContext();
         String name = context.getAuthentication().getName();
@@ -122,7 +122,7 @@ public class UserService {
     }
 
     @PostAuthorize("returnObject.username == authentication.name")
-    public UserResponse updateUser(String userId, UserUpdateReq req){
+    public UserResponse updateUser(String userId, UserUpdateReq req) {
         User user = userRepository.findById(userId).orElseThrow(() -> new AppException(ErrorCode.USER_NOTFOUND));
 
         user.setPassword(req.getPassword());
@@ -147,7 +147,7 @@ public class UserService {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    public void deleteUser(String userId){
+    public void deleteUser(String userId) {
         userRepository.deleteById(userId);
     }
 

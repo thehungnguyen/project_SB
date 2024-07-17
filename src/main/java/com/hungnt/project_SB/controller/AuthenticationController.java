@@ -32,7 +32,7 @@ public class AuthenticationController {
 
 
     @PostMapping("/login")
-    ApiResponse<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest authenticationRequest){
+    ApiResponse<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest authenticationRequest) {
         ApiResponse apiResponse = new ApiResponse();
 
         // Join vao hang doi Login
@@ -40,9 +40,9 @@ public class AuthenticationController {
         log.info("Login request received. You are in the queue....");
 
         // Kiem tra den khi nao userName == authenReq.getUserName()
-        while(!queueRedisSerivce.isEmptyQueue()){
+        while (!queueRedisSerivce.isEmptyQueue()) {
             String userName = queueRedisSerivce.deQueue();
-            if(userName.equals(authenticationRequest.getUsername())){
+            if (userName.equals(authenticationRequest.getUsername())) {
                 log.info("Processed login for: " + userName);
                 var result = authenticationService.authenticate(authenticationRequest);
                 apiResponse.setResult(result);

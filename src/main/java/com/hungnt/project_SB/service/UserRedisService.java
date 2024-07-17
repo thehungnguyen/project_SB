@@ -23,18 +23,19 @@ public class UserRedisService {
     private String key = "all_users";
 
     // Clear cache
-    public void clear(){
+    public void clear() {
         redisTemplate.getConnectionFactory().getConnection().flushAll();
     }
 
     // Lay Users tu Redis
     public List<UserResponse> getAllUsers() throws JsonProcessingException {
         String json = (String) redisTemplate.opsForValue().get(key);
-        List<User> users = json != null ? redisObjectMapper.readValue(json, new TypeReference<List<User>>() {}) : null;
+        List<User> users = json != null ? redisObjectMapper.readValue(json, new TypeReference<List<User>>() {
+        }) : null;
 
         List<UserResponse> userResponses = new ArrayList<>();
 
-        if(users != null) {
+        if (users != null) {
             for (User user : users) {
                 UserResponse userResponse = new UserResponse();
                 userResponse.setId(user.getId());

@@ -12,13 +12,15 @@ public class QueueRedisSerivce {
     private static final String queueName = "loginQueue";
     private final RedisTemplate<String, Object> redisTemplate;
 
-    public void enQueue(String userName){
+    public void enQueue(String userName) {
         redisTemplate.opsForList().leftPush(queueName, userName);
     }
 
-    public String deQueue(){
+    public String deQueue() {
         return (String) redisTemplate.opsForList().rightPop(queueName, 5, TimeUnit.SECONDS);
     }
 
-    public boolean isEmptyQueue(){ return redisTemplate.opsForList().size(queueName) == 0; }
+    public boolean isEmptyQueue() {
+        return redisTemplate.opsForList().size(queueName) == 0;
+    }
 }

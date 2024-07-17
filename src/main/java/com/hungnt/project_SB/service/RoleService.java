@@ -21,7 +21,7 @@ public class RoleService {
     private PermissionRepository permissionRepository;
 
     @PreAuthorize("hasRole('ADMIN')")
-    public RoleResponse createRole(RoleRequest roleRequest){
+    public RoleResponse createRole(RoleRequest roleRequest) {
         Role role = new Role();
 
         role.setName(roleRequest.getName());
@@ -41,11 +41,11 @@ public class RoleService {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    public List<RoleResponse> getAllRoles(){
+    public List<RoleResponse> getAllRoles() {
         List<Role> roles = roleRepository.findAll();
         List<RoleResponse> roleResponses = new ArrayList<>();
 
-        for(Role r : roles){
+        for (Role r : roles) {
             RoleResponse roleResponse = new RoleResponse();
 
             roleResponse.setName(r.getName());
@@ -59,7 +59,7 @@ public class RoleService {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    public void deleteRole(String name){
+    public void deleteRole(String name) {
         roleRepository.deleteById(name);
     }
 }

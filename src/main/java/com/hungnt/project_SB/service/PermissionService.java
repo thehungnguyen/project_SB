@@ -17,7 +17,7 @@ public class PermissionService {
     private PermissionRepository permissionRepository;
 
     @PreAuthorize("hasRole('ADMIN')")
-    public PermissionResponse createPermission(PermissionRequest permissionRequest){
+    public PermissionResponse createPermission(PermissionRequest permissionRequest) {
         Permission permission = new Permission();
         permission.setName(permissionRequest.getName());
         permission.setDescription(permissionRequest.getDescription());
@@ -30,11 +30,11 @@ public class PermissionService {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    public List<PermissionResponse> getAllPermissions(){
+    public List<PermissionResponse> getAllPermissions() {
         List<Permission> permissions = permissionRepository.findAll();
         List<PermissionResponse> permissionResponses = new ArrayList<>();
 
-        for(Permission p : permissions){
+        for (Permission p : permissions) {
             PermissionResponse permissionResponse = new PermissionResponse();
             permissionResponse.setName(p.getName());
             permissionResponse.setDescription(p.getDescription());
@@ -46,7 +46,7 @@ public class PermissionService {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    public void deletePermission(String name){
+    public void deletePermission(String name) {
         permissionRepository.deleteById(name);
     }
 }

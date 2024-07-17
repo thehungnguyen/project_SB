@@ -3,7 +3,7 @@ package com.hungnt.project_SB.dto.response;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ApiResponse <T> {
+public class ApiResponse<T> {
     private int code = 1000;
     private String message;
     private T result;
