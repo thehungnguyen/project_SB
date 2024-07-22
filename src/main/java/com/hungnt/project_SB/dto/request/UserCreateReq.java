@@ -1,5 +1,6 @@
 package com.hungnt.project_SB.dto.request;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
@@ -13,6 +14,9 @@ public class UserCreateReq {
     private String firstName;
     private String lastName;
     private LocalDate dob;
+
+    @Email(message = "EMAIL_INVALID")
+    private String email;
 
     public String getUsername() {
         return username;
@@ -52,5 +56,13 @@ public class UserCreateReq {
 
     public void setDob(LocalDate dob) {
         this.dob = dob;
+    }
+
+    public @Email String getEmail() {
+        return email;
+    }
+
+    public void setEmail(@Email String email) {
+        this.email = email;
     }
 }

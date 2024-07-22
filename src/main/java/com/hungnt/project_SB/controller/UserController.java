@@ -7,6 +7,7 @@ import com.hungnt.project_SB.dto.request.UserUpdateReq;
 import com.hungnt.project_SB.dto.response.UserResponse;
 import com.hungnt.project_SB.service.UserRedisService;
 import com.hungnt.project_SB.service.UserService;
+import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +26,7 @@ public class UserController {
     private UserRedisService userRedisService;
 
     @PostMapping
-    ApiResponse<UserResponse> createUser(@RequestBody @Valid UserCreateReq req) {
+    ApiResponse<UserResponse> createUser(@RequestBody @Valid UserCreateReq req) throws MessagingException {
         ApiResponse apiResponse = new ApiResponse<>();
         apiResponse.setResult(userService.createUser(req));
         // Neu Create User thanh cong -> xoa bo nho Redis

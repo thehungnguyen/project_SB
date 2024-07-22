@@ -15,6 +15,7 @@ public class User {
     private String firstName;
     private String lastName;
     private LocalDate dob;
+    private String email;
 
     @ManyToMany
     private Set<Role> roles;
@@ -73,5 +74,13 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

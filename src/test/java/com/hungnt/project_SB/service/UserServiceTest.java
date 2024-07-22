@@ -4,6 +4,7 @@ import com.hungnt.project_SB.dto.request.UserCreateReq;
 import com.hungnt.project_SB.dto.response.UserResponse;
 import com.hungnt.project_SB.entity.User;
 import com.hungnt.project_SB.repository.UserRepository;
+import jakarta.mail.MessagingException;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -56,7 +57,7 @@ public class UserServiceTest {
     }
 
     @Test
-    void createUser_success(){
+    void createUser_success() throws MessagingException {
         //Given
         Mockito.when(userRepository.existsByUsername(ArgumentMatchers.anyString())).thenReturn(false);
         Mockito.when(userRepository.save(ArgumentMatchers.any())).thenReturn(user);

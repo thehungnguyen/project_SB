@@ -18,3 +18,10 @@ spring:
   redis:
     host: localhost
     port: 6379
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    email: mailtestservice.122@gmail.com
+    password: nisdeiphottbqdlj
+    protocol: smtp
+    isSSL: false

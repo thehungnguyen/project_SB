@@ -5,6 +5,7 @@ import com.hungnt.project_SB.entity.User;
 import com.hungnt.project_SB.repository.RoleRepository;
 import com.hungnt.project_SB.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,8 @@ import java.util.HashSet;
 @Configuration
 @Slf4j
 public class InitAppConfig {
+    @Value("${spring.mail.email}")
+    private String email;
 
     // Goi moi khi start app de kiem tra
     @Bean
@@ -33,14 +36,15 @@ public class InitAppConfig {
 
                 user.setUsername("admin");
                 user.setPassword("admin123");
+                user.setEmail(email);
 
                 var roles = new HashSet<Role>();
                 roles.add(roleAdmin);
                 user.setRoles(roles);
 
                 userRepository.save(user);
+                log.info("Application initialization successful.");
             }
-            log.info("Application initialization successful.");
         };
     }
 }
