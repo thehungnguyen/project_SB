@@ -1,5 +1,6 @@
 package com.hungnt.project_SB.service;
 
+import com.hungnt.project_SB.dto.request.MailRequest;
 import com.hungnt.project_SB.dto.request.UserCreateReq;
 import com.hungnt.project_SB.dto.request.UserUpdateReq;
 import com.hungnt.project_SB.dto.response.UserResponse;
@@ -9,6 +10,7 @@ import com.hungnt.project_SB.exception.AppException;
 import com.hungnt.project_SB.exception.ErrorCode;
 import com.hungnt.project_SB.repository.RoleRepository;
 import com.hungnt.project_SB.repository.UserRepository;
+import jakarta.mail.MessagingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +20,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class UserService {
@@ -29,8 +29,10 @@ public class UserService {
     private UserRepository userRepository;
     @Autowired
     private RoleRepository roleRepository;
+    @Autowired
+    private MailService mailService;
 
-    public UserResponse createUser(UserCreateReq req) {
+    public UserResponse createUser(UserCreateReq req) throws MessagingException {
         User user = new User();
 
         user.setUsername(req.getUsername());
@@ -45,6 +47,14 @@ public class UserService {
         roles.add(userRole);
         user.setRoles(roles);
 
+        // Set Email, kiem tra Email da ton tai trong User khac chua
+        String email = req.getEmail();
+        if(userRepository.existsByEmail(email)){
+            throw new AppException(ErrorCode.EMAIL_EXISTED);
+        }
+        else{
+            user.setEmail(email);
+        }
 
         // Tim trong DB da ton tai Username nay chua
         try {
@@ -53,6 +63,23 @@ public class UserService {
             throw new AppException(ErrorCode.USER_EXISTED);
         }
 
+        // Mail Service
+        MailRequest mailRequest = new MailRequest();
+
+        mailRequest.setTo(user.getEmail());
+        mailRequest.setSubject("XAC NHAN THONG TIN NGUOI DUNG");
+
+        Map<String, Object> properties = new HashMap<>();
+
+        properties.put("firstName", user.getFirstName());
+        properties.put("lastName", user.getLastName());
+        properties.put("username", user.getUsername());
+
+        mailRequest.setProperties(properties);
+
+        mailService.sendMail(mailRequest, "templateEmail");
+
+        // Gan User cho UserResponse
         UserResponse userResponse = new UserResponse();
 
         userResponse.setId(user.getId());
@@ -61,6 +88,7 @@ public class UserService {
         userResponse.setLastName(user.getLastName());
         userResponse.setDob(user.getDob());
         userResponse.setRoles(user.getRoles());
+        userResponse.setEmail(user.getEmail());
 
         return userResponse;
     }

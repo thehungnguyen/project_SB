@@ -12,7 +12,8 @@ public enum ErrorCode {
     USER_NOTFOUND(5, "User not found", HttpStatus.NOT_FOUND),
     UNAUTHENTICATED(6, "unauthenticated", HttpStatus.UNAUTHORIZED),
     UNAUTHORIZED(7, "Access Denied", HttpStatus.FORBIDDEN),
-    ROLE_NOTFOUND(8, "Role not found", HttpStatus.NOT_FOUND)
+    ROLE_NOTFOUND(8, "Role not found", HttpStatus.NOT_FOUND),
+    EMAIL_EXISTED(9, "Email Existed", HttpStatus.BAD_REQUEST)
     ;
 
     private int code;

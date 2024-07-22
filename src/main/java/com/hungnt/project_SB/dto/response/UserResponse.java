@@ -9,6 +9,7 @@ import java.util.Set;
 public class UserResponse {
     private String id;
     private String username;
+    private String email;
     private String firstName;
     private String lastName;
     private LocalDate dob;
@@ -60,5 +61,13 @@ public class UserResponse {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
