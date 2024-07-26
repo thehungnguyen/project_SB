@@ -13,7 +13,9 @@ public enum ErrorCode {
     UNAUTHENTICATED(6, "unauthenticated", HttpStatus.UNAUTHORIZED),
     UNAUTHORIZED(7, "Access Denied", HttpStatus.FORBIDDEN),
     ROLE_NOTFOUND(8, "Role not found", HttpStatus.NOT_FOUND),
-    EMAIL_EXISTED(9, "Email Existed", HttpStatus.BAD_REQUEST)
+    EMAIL_EXISTED(9, "Email Existed", HttpStatus.BAD_REQUEST),
+    IO_EXCEPTION(10, "I/O error", HttpStatus.INTERNAL_SERVER_ERROR),
+    PRODUCT_NOTFOUND(11, "Product not found", HttpStatus.NOT_FOUND)
     ;
 
     private int code;

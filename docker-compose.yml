@@ -2,28 +2,48 @@ services:
   mysql:
     image: mysql:8.0.36-debian
     container_name: mysql
-    restart: always
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_ROOT_HOST: "%"
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
-    restart: always
     ports:
       - "8080:80"
     environment:
       PMA_HOST: mysql
+
   redis:
     image: docker.io/redis:7.2.3
     container_name: redis
-    restart: always
     ports:
       - "6379:6379"
     volumes:
       - ./redis_data:/data
+
+  elasticsearch:
+    image: elasticsearch:7.17.9
+    container_name: elasticsearch
+    environment:
+      - node.name=elasticsearch
+      - cluster.name=es-cluster
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+    ports:
+      - "9200:9200"
+    volumes:
+      - ./es_data:/usr/share/elasticsearch/data
+
+  kibana:
+    image: kibana:7.17.9
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    ports:
+      - "5601:5601"
 
 # docker-compose -f ./docker-compose.yml down
 # docker-compose -f ./docker-compose.yml up -d

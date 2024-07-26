@@ -1,6 +1,7 @@
 package com.hungnt.project_SB.entity;
 
 import jakarta.persistence.*;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.time.LocalDate;
 import java.util.Set;

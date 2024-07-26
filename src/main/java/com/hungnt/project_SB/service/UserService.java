@@ -14,7 +14,6 @@ import jakarta.mail.MessagingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -35,7 +34,15 @@ public class UserService {
     public UserResponse createUser(UserCreateReq req) throws MessagingException {
         User user = new User();
 
-        user.setUsername(req.getUsername());
+        // Tim trong DB da ton tai Username nay chua
+        String username = req.getUsername();
+        if(userRepository.existsByUsername(username)){
+            throw new AppException(ErrorCode.USER_EXISTED);
+        }
+        else{
+            user.setUsername(username);
+        }
+
         user.setPassword(req.getPassword());
         user.setFirstName(req.getFirstName());
         user.setLastName(req.getLastName());
@@ -56,12 +63,8 @@ public class UserService {
             user.setEmail(email);
         }
 
-        // Tim trong DB da ton tai Username nay chua
-        try {
-            user = userRepository.save(user);
-        } catch (DataIntegrityViolationException e) {
-            throw new AppException(ErrorCode.USER_EXISTED);
-        }
+        // Save User
+        userRepository.save(user);
 
         // Mail Service
         MailRequest mailRequest = new MailRequest();
