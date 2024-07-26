@@ -2,11 +2,14 @@ package com.hungnt.project_SB.exception;
 
 import com.hungnt.project_SB.dto.response.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import java.io.IOException;
 
 @ControllerAdvice
 @Slf4j
@@ -64,5 +67,17 @@ public class GlobalExceptionHandler {
         apiResponse.setMessage(errorCode.getMessage());
 
         return ResponseEntity.badRequest().body(apiResponse);
+    }
+
+    // Xử lý IOException
+    @ExceptionHandler(IOException.class)
+    public ResponseEntity<ApiResponse> handleIOException(IOException ex) {
+        log.error("IOException: ", ex);
+        ApiResponse apiResponse = new ApiResponse();
+
+        apiResponse.setCode(ErrorCode.IO_EXCEPTION.getCode());
+        apiResponse.setMessage(ErrorCode.IO_EXCEPTION.getMessage());
+
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(apiResponse);
     }
 }
