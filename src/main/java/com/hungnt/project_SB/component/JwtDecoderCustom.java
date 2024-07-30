@@ -1,4 +1,4 @@
-package com.hungnt.project_SB.configuration;
+package com.hungnt.project_SB.component;
 
 import com.hungnt.project_SB.dto.request.VerifindTokenRequest;
 import com.hungnt.project_SB.service.AuthenticationService;

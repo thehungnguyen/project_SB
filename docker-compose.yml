@@ -45,5 +45,29 @@ services:
     ports:
       - "5601:5601"
 
+  kafka:
+    image: 'bitnami/kafka:3.7.0'
+    container_name: kafka
+    hostname: kafka
+    ports:
+      - '9094:9094'
+    environment:
+      # ID NODE của Kafka Cluster
+      KAFKA_CFG_NODE_ID: 0
+      # Vai trò của node
+      KAFKA_CFG_PROCESS_ROLES: controller,broker
+      # Cho phép node tham gia quá trình bầu cử Cluster Leader
+      KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 0@kafka:9093
+      # 9092: Lắng nghe các Broker khác trong nội bộ
+      # 9093: Lắng nghe Cluster Leader
+      # 9094: Lắng nghe kết nối từ client bên ngoài
+      KAFKA_CFG_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:9094
+      # Địa chỉ để quảng bá: 9092 (nội bộ), 9094 (client bên ngoài)
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNAL://localhost:9094
+      # Giao thức bảo mật cho Listener
+      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      # Chỉ định tên của Listener mà Controller (Cluster Leader) sử dụng
+      KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER
+
 # docker-compose -f ./docker-compose.yml down
 # docker-compose -f ./docker-compose.yml up -d

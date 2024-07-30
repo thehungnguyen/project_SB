@@ -1,5 +1,6 @@
 package com.hungnt.project_SB.configuration;
 
+import com.hungnt.project_SB.component.JwtDecoderCustom;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.context.annotation.Bean;

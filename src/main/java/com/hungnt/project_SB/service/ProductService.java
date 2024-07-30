@@ -5,6 +5,7 @@ import com.hungnt.project_SB.exception.AppException;
 import com.hungnt.project_SB.exception.ErrorCode;
 import com.hungnt.project_SB.repository.ProductESRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
@@ -14,9 +15,7 @@ public class ProductService {
     private ProductESRepository productESRepository;
 
     @PreAuthorize("hasRole('ADMIN')")
-    public Product saveProduct(Product product){
-        return productESRepository.save(product);
-    }
+    public Product saveProduct(Product product){ return productESRepository.save(product);}
 
     @PreAuthorize("hasRole('ADMIN')")
     public Iterable<Product> getAll(){
