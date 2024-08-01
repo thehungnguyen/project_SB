@@ -14,6 +14,7 @@ import jakarta.mail.MessagingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -30,6 +31,8 @@ public class UserService {
     private RoleRepository roleRepository;
     @Autowired
     private MailService mailService;
+    @Autowired
+    private KafkaTemplate<String, Object> kafkaTemplate;
 
     public UserResponse createUser(UserCreateReq req) throws MessagingException {
         User user = new User();
@@ -66,21 +69,8 @@ public class UserService {
         // Save User
         userRepository.save(user);
 
-        // Mail Service
-        MailRequest mailRequest = new MailRequest();
-
-        mailRequest.setTo(user.getEmail());
-        mailRequest.setSubject("XAC NHAN THONG TIN NGUOI DUNG");
-
-        Map<String, Object> properties = new HashMap<>();
-
-        properties.put("firstName", user.getFirstName());
-        properties.put("lastName", user.getLastName());
-        properties.put("username", user.getUsername());
-
-        mailRequest.setProperties(properties);
-
-        mailService.sendMail(mailRequest, "templateEmail");
+        // Kafka - Message Queue
+        kafkaTemplate.send("sendEmail", user);
 
         // Gan User cho UserResponse
         UserResponse userResponse = new UserResponse();

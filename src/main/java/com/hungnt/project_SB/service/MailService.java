@@ -15,10 +15,8 @@ import org.thymeleaf.spring6.SpringTemplateEngine;
 public class MailService {
     @Autowired
     private JavaMailSender javaMailSender;
-
     @Autowired
     private SpringTemplateEngine springTemplateEngine;
-
     /*
     Nhan 2 tham so:
     1. Thong tin Email(mailRequest)

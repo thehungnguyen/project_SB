@@ -105,7 +105,7 @@ org.springframework.security.authentication.AuthenticationServiceException: Toke
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 Caused by: org.springframework.security.oauth2.jwt.JwtException: Token invalid
-	at com.hungnt.project_SB.configuration.JwtDecoderCustom.decode(JwtDecoderCustom.java:38)
+	at com.hungnt.project_SB.component.JwtDecoderCustom.decode(JwtDecoderCustom.java:38)
 	at org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationProvider.getJwt(JwtAuthenticationProvider.java:99)
 	... 63 common frames omitted
 2024-07-22 10:48:33 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
