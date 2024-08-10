@@ -1,6 +1,5 @@
 package com.hungnt.project_SB.service;
 
-import com.hungnt.project_SB.dto.request.MailRequest;
 import com.hungnt.project_SB.dto.request.UserCreateReq;
 import com.hungnt.project_SB.dto.request.UserUpdateReq;
 import com.hungnt.project_SB.dto.response.UserResponse;

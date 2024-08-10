@@ -3,12 +3,10 @@ package com.hungnt.project_SB.controller;
 import com.hungnt.project_SB.dto.request.RoleRequest;
 import com.hungnt.project_SB.dto.response.ApiResponse;
 import com.hungnt.project_SB.dto.response.RoleResponse;
-import com.hungnt.project_SB.entity.Role;
 import com.hungnt.project_SB.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping("/roles")
