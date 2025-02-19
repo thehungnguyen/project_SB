@@ -4,36 +4,34 @@ import com.hungnt.project_SB.dto.request.PermissionRequest;
 import com.hungnt.project_SB.dto.response.ApiResponse;
 import com.hungnt.project_SB.dto.response.PermissionResponse;
 import com.hungnt.project_SB.service.PermissionService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RequestMapping("/permissions")
 @RestController
+@RequiredArgsConstructor
 public class PermissionController {
-    @Autowired
-    private PermissionService permissionService;
+    private final PermissionService permissionService;
 
     @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public ApiResponse<PermissionResponse> createPermission(@RequestBody PermissionRequest permissionRequest) {
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setResult(permissionService.createPermission(permissionRequest));
-        return apiResponse;
+        return permissionService.createPermission(permissionRequest);
     }
 
     @GetMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public ApiResponse<List<PermissionResponse>> getAllPermission() {
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setResult(permissionService.getAllPermissions());
-        return apiResponse;
+        return permissionService.getAllPermissions();
     }
 
     @DeleteMapping("/{permissionName}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ApiResponse<String> deletePermission(@PathVariable String permissionName) {
-        permissionService.deletePermission(permissionName);
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setResult("Permission has been deleted");
-        return apiResponse;
+        return permissionService.deletePermission(permissionName);
     }
 }

@@ -4,6 +4,7 @@ import com.hungnt.project_SB.dto.request.AuthenticationRequest;
 import com.hungnt.project_SB.dto.request.LogoutRequest;
 import com.hungnt.project_SB.dto.request.RefreshTokenRequest;
 import com.hungnt.project_SB.dto.request.VerifindTokenRequest;
+import com.hungnt.project_SB.dto.response.ApiResponse;
 import com.hungnt.project_SB.dto.response.AuthenticationResponse;
 import com.hungnt.project_SB.dto.response.VerifindTokenResponse;
 import com.hungnt.project_SB.entity.InvalidToken;
@@ -67,7 +68,7 @@ public class AuthenticationService {
     }
 
     // Dang xuat ~ Logout
-    public void logout(LogoutRequest logoutRequest) throws ParseException, JOSEException {
+    public ApiResponse<String> logout(LogoutRequest logoutRequest) throws ParseException, JOSEException {
         try {
             //Lay ra id token va thoi gian het han token
             var signToken = signedJwtToken(logoutRequest.getToken(), false);
@@ -80,6 +81,11 @@ public class AuthenticationService {
             invalidToken.setExpiryTime(expiryTime);
 
             invalidTokenRepository.save(invalidToken);
+
+            ApiResponse apiResponse = new ApiResponse();
+            apiResponse.setResult("Account has been logged out");
+
+            return apiResponse;
         } catch (AppException exception) {
             log.info("Token already expired");
         }
@@ -123,7 +129,7 @@ public class AuthenticationService {
     }
 
     // Kiem tra token co dung khong
-    public VerifindTokenResponse verifyToken(VerifindTokenRequest verifindTokenRequest) throws ParseException, JOSEException {
+    public ApiResponse<VerifindTokenResponse> verifyToken(VerifindTokenRequest verifindTokenRequest) throws ParseException, JOSEException {
         var token = verifindTokenRequest.getToken();
         boolean isValid = true;
 
@@ -136,11 +142,15 @@ public class AuthenticationService {
 
         VerifindTokenResponse verifindTokenResponse = new VerifindTokenResponse();
         verifindTokenResponse.setValidToken(isValid);
-        return verifindTokenResponse;
+
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setResult(verifindTokenResponse);
+
+        return apiResponse;
     }
 
     // Lam moi token
-    public AuthenticationResponse refreshToken(RefreshTokenRequest refreshTokenRequest) throws ParseException, JOSEException {
+    public ApiResponse<AuthenticationResponse> refreshToken(RefreshTokenRequest refreshTokenRequest) throws ParseException, JOSEException {
         // Kiem tra thoi gian hieu luc cua token
         var signedJWT = signedJwtToken(refreshTokenRequest.getToken(), true);
 
@@ -165,7 +175,10 @@ public class AuthenticationService {
         authenticationResponse.setAuthenticated(true);
         authenticationResponse.setToken(token);
 
-        return authenticationResponse;
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setResult(authenticationResponse);
+
+        return apiResponse;
     }
 
     // do quy dinh trong oauth2 giua các role canh nhau bang " "

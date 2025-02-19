@@ -4,36 +4,34 @@ import com.hungnt.project_SB.dto.request.RoleRequest;
 import com.hungnt.project_SB.dto.response.ApiResponse;
 import com.hungnt.project_SB.dto.response.RoleResponse;
 import com.hungnt.project_SB.service.RoleService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RequestMapping("/roles")
 @RestController
+@RequiredArgsConstructor
 public class RoleController {
-    @Autowired
-    private RoleService roleService;
+    private final RoleService roleService;
 
     @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
     ApiResponse<RoleResponse> createRole(@RequestBody RoleRequest roleRequest) {
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setResult(roleService.createRole(roleRequest));
-        return apiResponse;
+        return roleService.createRole(roleRequest);
     }
 
     @GetMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public ApiResponse<List<RoleResponse>> getAllRole() {
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setResult(roleService.getAllRoles());
-        return apiResponse;
+        return roleService.getAllRoles();
     }
 
     @DeleteMapping("/{roleName}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ApiResponse<String> deleteRole(@PathVariable String roleName) {
-        roleService.deleteRole(roleName);
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setResult("Role has been deleted");
-        return apiResponse;
+        return roleService.deleteRole(roleName);
     }
 }

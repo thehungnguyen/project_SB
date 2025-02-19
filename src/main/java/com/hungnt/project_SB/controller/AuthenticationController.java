@@ -25,60 +25,26 @@ import java.text.ParseException;
 @RestController
 @RequiredArgsConstructor
 public class AuthenticationController {
-    @Autowired
-    private AuthenticationService authenticationService;
-    @Autowired
-    private QueueRedisSerivce queueRedisSerivce;
-
+    private final AuthenticationService authenticationService;
+    private final QueueRedisSerivce queueRedisSerivce;
 
     @PostMapping("/login")
     ApiResponse<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest authenticationRequest) {
-        ApiResponse apiResponse = new ApiResponse();
-
-        // Join vao hang doi Login
-        queueRedisSerivce.enQueue(authenticationRequest.getUsername());
-        log.info("Login request received. You are in the queue....");
-
-        // Kiem tra den khi nao userName == authenReq.getUserName()
-        while (!queueRedisSerivce.isEmptyQueue()) {
-            String userName = queueRedisSerivce.deQueue();
-            if (userName.equals(authenticationRequest.getUsername())) {
-                log.info("Processed login for: " + userName);
-                var result = authenticationService.authenticate(authenticationRequest);
-                apiResponse.setResult(result);
-                break;
-            }
-        }
-        return apiResponse;
+        return queueRedisSerivce.login(authenticationRequest);
     }
 
     @PostMapping("/logout")
     ApiResponse<String> logout(@RequestBody LogoutRequest logoutRequest) throws ParseException, JOSEException {
-        authenticationService.logout(logoutRequest);
-
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setResult("Account has been logged out");
-
-        return apiResponse;
+        return authenticationService.logout(logoutRequest);
     }
 
     @PostMapping("/verifindtoken")
     ApiResponse<VerifindTokenResponse> verification(@RequestBody VerifindTokenRequest verifindTokenRequest) throws ParseException, JOSEException {
-        var result = authenticationService.verifyToken(verifindTokenRequest);
-
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setResult(result);
-
-        return apiResponse;
+        return authenticationService.verifyToken(verifindTokenRequest);
     }
 
     @PostMapping("/refreshToken")
     ApiResponse<AuthenticationResponse> refreshToken(@RequestBody RefreshTokenRequest refreshTokenRequest) throws ParseException, JOSEException {
-        var result = authenticationService.refreshToken(refreshTokenRequest);
-
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setResult(result);
-
-        return apiResponse;
+        return authenticationService.refreshToken(refreshTokenRequest);
     }
 }
