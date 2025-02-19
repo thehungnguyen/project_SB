@@ -33,3 +33,5 @@ build/
 .vscode/
 
 es_data/
+redis_data/
+logs/
