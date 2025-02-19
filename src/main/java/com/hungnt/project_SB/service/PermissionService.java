@@ -1,9 +1,12 @@
 package com.hungnt.project_SB.service;
 
 import com.hungnt.project_SB.dto.request.PermissionRequest;
+import com.hungnt.project_SB.dto.response.ApiResponse;
 import com.hungnt.project_SB.dto.response.PermissionResponse;
 import com.hungnt.project_SB.entity.Permission;
 import com.hungnt.project_SB.repository.PermissionRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
@@ -11,42 +14,51 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @Service
+@RequiredArgsConstructor
 public class PermissionService {
-    @Autowired
-    private PermissionRepository permissionRepository;
+    private final PermissionRepository permissionRepository;
 
-    @PreAuthorize("hasRole('ADMIN')")
-    public PermissionResponse createPermission(PermissionRequest permissionRequest) {
+    public ApiResponse<PermissionResponse> createPermission(PermissionRequest permissionRequest) {
         Permission permission = new Permission();
+
         permission.setName(permissionRequest.getName());
         permission.setDescription(permissionRequest.getDescription());
         permissionRepository.save(permission);
 
+        PermissionResponse permissionResponse = mapPermissionMTR(permission);
+
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setResult(permissionResponse);
+        return apiResponse;
+    }
+
+
+    public ApiResponse<List<PermissionResponse>> getAllPermissions() {
+        List<Permission> permissions = permissionRepository.findAll();
+        List<PermissionResponse> permissionResponses = permissions.stream().map(this::mapPermissionMTR).toList();
+
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setResult(permissionResponses);
+        return apiResponse;
+    }
+
+
+    public ApiResponse<String> deletePermission(String name) {
+        permissionRepository.deleteById(name);
+
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setResult("Permission has been deleted");
+        return apiResponse;
+    }
+
+    private PermissionResponse mapPermissionMTR(Permission permission) {
         PermissionResponse permissionResponse = new PermissionResponse();
+
         permissionResponse.setName(permission.getName());
         permissionResponse.setDescription(permission.getDescription());
+
         return permissionResponse;
-    }
-
-    @PreAuthorize("hasRole('ADMIN')")
-    public List<PermissionResponse> getAllPermissions() {
-        List<Permission> permissions = permissionRepository.findAll();
-        List<PermissionResponse> permissionResponses = new ArrayList<>();
-
-        for (Permission p : permissions) {
-            PermissionResponse permissionResponse = new PermissionResponse();
-            permissionResponse.setName(p.getName());
-            permissionResponse.setDescription(p.getDescription());
-
-            permissionResponses.add(permissionResponse);
-        }
-
-        return permissionResponses;
-    }
-
-    @PreAuthorize("hasRole('ADMIN')")
-    public void deletePermission(String name) {
-        permissionRepository.deleteById(name);
     }
 }
