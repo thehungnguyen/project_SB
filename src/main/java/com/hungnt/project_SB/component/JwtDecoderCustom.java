@@ -35,7 +35,7 @@ public class JwtDecoderCustom implements JwtDecoder {
 
             var response = authenticationService.verifyToken(verifindTokenRequest);
 
-            if (!response.isValidToken()) throw new JwtException("Token invalid");
+            if (!response.getResult().isValidToken()) throw new JwtException("Token invalid");
         } catch (JOSEException | ParseException e) {
             throw new JwtException(e.getMessage());
         }

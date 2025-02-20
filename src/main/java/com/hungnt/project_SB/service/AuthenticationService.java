@@ -88,6 +88,7 @@ public class AuthenticationService {
             return apiResponse;
         } catch (AppException exception) {
             log.info("Token already expired");
+            return null;
         }
     }
 

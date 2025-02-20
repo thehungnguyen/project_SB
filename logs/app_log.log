@@ -1,727 +1,183 @@
-2024-08-01 09:57:07 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-01 09:57:08 INFO  c.h.project_SB.ProjectSbApplication - Starting ProjectSbApplication using Java 21.0.3 with PID 11580 (E:\project_SB\target\classes started by nguye in E:\project_SB)
-2024-08-01 09:57:08 INFO  c.h.project_SB.ProjectSbApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 769 ms. Found 1 Elasticsearch repository interface.
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 0 Reactive Elasticsearch repository interfaces.
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 09:57:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-01 09:57:16 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
-2024-08-01 09:57:16 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
-2024-08-01 09:57:16 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 09:57:16 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-01 09:57:16 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 09:57:16 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 09:57:16 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 09:57:16 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 09:57:16 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 09:57:16 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
-2024-08-01 09:57:19 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
-2024-08-01 09:57:19 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2024-08-01 09:57:19 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-01 09:57:19 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-01 09:57:20 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-01 09:57:20 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 12014 ms
-2024-08-01 09:57:21 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-01 09:57:21 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.9.Final
-2024-08-01 09:57:21 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-01 09:57:22 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-01 09:57:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-08-01 09:57:25 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@749ee0e3
-2024-08-01 09:57:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-08-01 09:57:28 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-01 09:57:28 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-01 09:57:32 WARN  org.elasticsearch.client.RestClient - request [HEAD http://localhost:9200/products] returned 1 warnings: [299 Elasticsearch-7.17.9-ef48222227ee6b9e70e502f0f0daa52435ee634d "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
-2024-08-01 09:57:33 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-01 09:57:34 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48e0e779, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38ad8c75, org.springframework.security.web.context.SecurityContextHolderFilter@3794621d, org.springframework.security.web.header.HeaderWriterFilter@15aa3084, org.springframework.web.filter.CorsFilter@22a10b71, org.springframework.security.web.authentication.logout.LogoutFilter@7f8f120c, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@f62ae87, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f5caea5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68f9a4f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d67f6f, org.springframework.security.web.access.ExceptionTranslationFilter@635b3ec7, org.springframework.security.web.access.intercept.AuthorizationFilter@1512a767]
-2024-08-01 09:57:36 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2024-08-01 09:57:36 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path ''
-2024-08-01 09:57:36 INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = earliest
-	bootstrap.servers = [localhost:9094]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-sendEmailGroup-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = sendEmailGroup
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+2025-02-20 12:07:53 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-02-20 12:07:53 INFO  c.h.project_SB.ProjectSbApplication - Starting ProjectSbApplication using Java 21.0.3 with PID 17300 (E:\Project Java Spring Boot\project_SB\target\classes started by nguye in E:\Project Java Spring Boot\project_SB)
+2025-02-20 12:07:53 INFO  c.h.project_SB.ProjectSbApplication - No active profile set, falling back to 1 default profile: "default"
+2025-02-20 12:07:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:07:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 312 ms. Found 1 Elasticsearch repository interface.
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 4 JPA repository interfaces.
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:07:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2025-02-20 12:08:00 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-02-20 12:08:00 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-02-20 12:08:00 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-02-20 12:08:00 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-02-20 12:08:00 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-02-20 12:08:00 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6576 ms
+2025-02-20 12:08:00 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 12:08:00 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.9.Final
+2025-02-20 12:08:00 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-02-20 12:08:01 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 12:08:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-02-20 12:08:03 ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'manager_service'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.hungnt.project_SB.ProjectSbApplication.main(ProjectSbApplication.java:10)
+2025-02-20 12:08:03 WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.hungnt.project_SB.ProjectSbApplication.main(ProjectSbApplication.java:10)
+2025-02-20 12:08:03 ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-02-20 12:08:03 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-02-20 12:08:03 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-02-20 12:08:03 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
 
-2024-08-01 09:57:37 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.2
-2024-08-01 09:57:37 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: c4deed513057c94e
-2024-08-01 09:57:37 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1722481057789
-2024-08-01 09:57:37 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Subscribed to topic(s): sendEmail
-2024-08-01 09:57:37 INFO  c.h.project_SB.ProjectSbApplication - Started ProjectSbApplication in 32.312 seconds (process running for 34.719)
-2024-08-01 09:57:39 INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Cluster ID: nyoLJbnpRKqjL0bf_kUMNg
-2024-08-01 09:57:39 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
-2024-08-01 09:57:39 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
-2024-08-01 09:57:39 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: need to re-join with the given member-id: consumer-sendEmailGroup-1-5d01d89d-c524-4798-86db-109bc792253a
-2024-08-01 09:57:39 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2024-08-01 09:57:39 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
-2024-08-01 09:57:42 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully joined group with generation Generation{generationId=17, memberId='consumer-sendEmailGroup-1-5d01d89d-c524-4798-86db-109bc792253a', protocol='range'}
-2024-08-01 09:57:42 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Finished assignment for group at generation 17: {consumer-sendEmailGroup-1-5d01d89d-c524-4798-86db-109bc792253a=Assignment(partitions=[sendEmail-0])}
-2024-08-01 09:57:42 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully synced group in generation Generation{generationId=17, memberId='consumer-sendEmailGroup-1-5d01d89d-c524-4798-86db-109bc792253a', protocol='range'}
-2024-08-01 09:57:42 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Notifying assignor about the new Assignment(partitions=[sendEmail-0])
-2024-08-01 09:57:42 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Adding newly assigned partitions: sendEmail-0
-2024-08-01 09:57:42 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Setting offset for partition sendEmail-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 0 rack: null)], epoch=8}}
-2024-08-01 09:57:42 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions assigned: [sendEmail-0]
-2024-08-01 09:58:18 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-01 09:58:18 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-01 09:58:18 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-2024-08-01 09:58:20 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 866 ms
-2024-08-01 09:59:06 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Revoke previously assigned partitions sendEmail-0
-2024-08-01 09:59:06 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions revoked: [sendEmail-0]
-2024-08-01 09:59:06 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Member consumer-sendEmailGroup-1-5d01d89d-c524-4798-86db-109bc792253a sending LeaveGroup request to coordinator localhost:9094 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
-2024-08-01 09:59:06 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
-2024-08-01 09:59:06 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
-2024-08-01 09:59:06 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Unsubscribed all topics or patterns and assigned partitions
-2024-08-01 09:59:06 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
-2024-08-01 09:59:06 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
-2024-08-01 09:59:06 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
-2024-08-01 09:59:06 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-08-01 09:59:06 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
-2024-08-01 09:59:06 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-sendEmailGroup-1 unregistered
-2024-08-01 09:59:06 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: Consumer stopped
-2024-08-01 09:59:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-01 09:59:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-08-01 09:59:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-08-01 10:49:16 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-01 10:49:16 INFO  c.h.project_SB.ProjectSbApplication - Starting ProjectSbApplication using Java 21.0.3 with PID 2996 (E:\project_SB\target\classes started by nguye in E:\project_SB)
-2024-08-01 10:49:16 INFO  c.h.project_SB.ProjectSbApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-01 10:49:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 10:49:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-2024-08-01 10:49:20 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 10:49:20 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 10:49:20 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 10:49:20 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 585 ms. Found 1 Elasticsearch repository interface.
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Reactive Elasticsearch repository interfaces.
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 4 JPA repository interfaces.
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 10:49:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-2024-08-01 10:49:23 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
-2024-08-01 10:49:23 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2024-08-01 10:49:23 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-01 10:49:23 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-01 10:49:23 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-01 10:49:23 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6552 ms
-2024-08-01 10:49:23 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-01 10:49:24 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.9.Final
-2024-08-01 10:49:24 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-01 10:49:24 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-01 10:49:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-08-01 10:49:26 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1de6dc80
-2024-08-01 10:49:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-08-01 10:49:29 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-01 10:49:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-01 10:49:33 WARN  org.elasticsearch.client.RestClient - request [HEAD http://localhost:9200/products] returned 1 warnings: [299 Elasticsearch-7.17.9-ef48222227ee6b9e70e502f0f0daa52435ee634d "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
-2024-08-01 10:49:33 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-01 10:49:34 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22d82fe8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2175111e, org.springframework.security.web.context.SecurityContextHolderFilter@2be9425f, org.springframework.security.web.header.HeaderWriterFilter@1107cbd8, org.springframework.web.filter.CorsFilter@74c74c99, org.springframework.security.web.authentication.logout.LogoutFilter@59aa646e, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@4dd31687, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57cd5cc9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3af1b643, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35b5056e, org.springframework.security.web.access.ExceptionTranslationFilter@6311640d, org.springframework.security.web.access.intercept.AuthorizationFilter@162ccd19]
-2024-08-01 10:49:35 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2024-08-01 10:49:35 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path ''
-2024-08-01 10:49:36 INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = earliest
-	bootstrap.servers = [localhost:9094]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-sendEmailGroup-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = sendEmailGroup
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
-
-2024-08-01 10:49:36 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.2
-2024-08-01 10:49:36 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: c4deed513057c94e
-2024-08-01 10:49:36 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1722484176506
-2024-08-01 10:49:36 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Subscribed to topic(s): sendEmail
-2024-08-01 10:49:36 INFO  c.h.project_SB.ProjectSbApplication - Started ProjectSbApplication in 21.855 seconds (process running for 24.241)
-2024-08-01 10:49:37 INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Cluster ID: nyoLJbnpRKqjL0bf_kUMNg
-2024-08-01 10:49:37 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
-2024-08-01 10:49:37 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
-2024-08-01 10:49:38 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: need to re-join with the given member-id: consumer-sendEmailGroup-1-f54ad248-6b4d-4059-847c-9b4580787423
-2024-08-01 10:49:38 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2024-08-01 10:49:38 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
-2024-08-01 10:49:41 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully joined group with generation Generation{generationId=19, memberId='consumer-sendEmailGroup-1-f54ad248-6b4d-4059-847c-9b4580787423', protocol='range'}
-2024-08-01 10:49:41 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Finished assignment for group at generation 19: {consumer-sendEmailGroup-1-f54ad248-6b4d-4059-847c-9b4580787423=Assignment(partitions=[sendEmail-0])}
-2024-08-01 10:49:41 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully synced group in generation Generation{generationId=19, memberId='consumer-sendEmailGroup-1-f54ad248-6b4d-4059-847c-9b4580787423', protocol='range'}
-2024-08-01 10:49:41 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Notifying assignor about the new Assignment(partitions=[sendEmail-0])
-2024-08-01 10:49:41 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Adding newly assigned partitions: sendEmail-0
-2024-08-01 10:49:41 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Setting offset for partition sendEmail-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 0 rack: null)], epoch=8}}
-2024-08-01 10:49:41 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions assigned: [sendEmail-0]
-2024-08-01 10:50:30 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-01 10:50:30 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-01 10:50:30 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2024-08-01 10:50:32 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1543 ms
-2024-08-01 10:53:24 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Revoke previously assigned partitions sendEmail-0
-2024-08-01 10:53:24 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions revoked: [sendEmail-0]
-2024-08-01 10:53:24 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Member consumer-sendEmailGroup-1-f54ad248-6b4d-4059-847c-9b4580787423 sending LeaveGroup request to coordinator localhost:9094 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
-2024-08-01 10:53:24 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
-2024-08-01 10:53:24 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
-2024-08-01 10:53:24 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Unsubscribed all topics or patterns and assigned partitions
-2024-08-01 10:53:24 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
-2024-08-01 10:53:24 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
-2024-08-01 10:53:24 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
-2024-08-01 10:53:24 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-08-01 10:53:24 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
-2024-08-01 10:53:24 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-sendEmailGroup-1 unregistered
-2024-08-01 10:53:24 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: Consumer stopped
-2024-08-01 10:53:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-01 10:53:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-08-01 10:53:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-08-01 10:53:34 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-01 10:53:34 INFO  c.h.project_SB.ProjectSbApplication - Starting ProjectSbApplication using Java 21.0.3 with PID 5484 (E:\project_SB\target\classes started by nguye in E:\project_SB)
-2024-08-01 10:53:34 INFO  c.h.project_SB.ProjectSbApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-01 10:53:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 10:53:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-2024-08-01 10:53:37 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 10:53:37 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 10:53:37 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 10:53:37 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 364 ms. Found 1 Elasticsearch repository interface.
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Reactive Elasticsearch repository interfaces.
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 10:53:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-2024-08-01 10:53:40 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
-2024-08-01 10:53:40 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2024-08-01 10:53:40 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-01 10:53:40 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-01 10:53:40 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-01 10:53:40 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5957 ms
-2024-08-01 10:53:41 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-01 10:53:41 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.9.Final
-2024-08-01 10:53:41 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-01 10:53:41 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-01 10:53:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-08-01 10:53:43 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77b27b57
-2024-08-01 10:53:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-08-01 10:53:46 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-01 10:53:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-01 10:53:49 WARN  org.elasticsearch.client.RestClient - request [HEAD http://localhost:9200/products] returned 1 warnings: [299 Elasticsearch-7.17.9-ef48222227ee6b9e70e502f0f0daa52435ee634d "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
-2024-08-01 10:53:50 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-01 10:53:51 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28ec35e3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5068a2b1, org.springframework.security.web.context.SecurityContextHolderFilter@492c1b1b, org.springframework.security.web.header.HeaderWriterFilter@233d40da, org.springframework.web.filter.CorsFilter@52268f73, org.springframework.security.web.authentication.logout.LogoutFilter@53eb4dae, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@2c95cb24, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72f112d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63c78e5e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3938e876, org.springframework.security.web.access.ExceptionTranslationFilter@3af1b643, org.springframework.security.web.access.intercept.AuthorizationFilter@4dd31687]
-2024-08-01 10:53:52 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2024-08-01 10:53:52 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path ''
-2024-08-01 10:53:53 INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = earliest
-	bootstrap.servers = [localhost:9094]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-sendEmailGroup-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = sendEmailGroup
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
-
-2024-08-01 10:53:53 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.2
-2024-08-01 10:53:53 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: c4deed513057c94e
-2024-08-01 10:53:53 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1722484433474
-2024-08-01 10:53:53 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Subscribed to topic(s): sendEmail
-2024-08-01 10:53:53 INFO  c.h.project_SB.ProjectSbApplication - Started ProjectSbApplication in 20.44 seconds (process running for 21.478)
-2024-08-01 10:53:54 INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Cluster ID: nyoLJbnpRKqjL0bf_kUMNg
-2024-08-01 10:53:54 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
-2024-08-01 10:53:54 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
-2024-08-01 10:53:54 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: need to re-join with the given member-id: consumer-sendEmailGroup-1-41589e72-91b5-467c-9d21-1555aae8eeec
-2024-08-01 10:53:54 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2024-08-01 10:53:54 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
-2024-08-01 10:53:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully joined group with generation Generation{generationId=21, memberId='consumer-sendEmailGroup-1-41589e72-91b5-467c-9d21-1555aae8eeec', protocol='range'}
-2024-08-01 10:53:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Finished assignment for group at generation 21: {consumer-sendEmailGroup-1-41589e72-91b5-467c-9d21-1555aae8eeec=Assignment(partitions=[sendEmail-0])}
-2024-08-01 10:53:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully synced group in generation Generation{generationId=21, memberId='consumer-sendEmailGroup-1-41589e72-91b5-467c-9d21-1555aae8eeec', protocol='range'}
-2024-08-01 10:53:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Notifying assignor about the new Assignment(partitions=[sendEmail-0])
-2024-08-01 10:53:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Adding newly assigned partitions: sendEmail-0
-2024-08-01 10:53:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Setting offset for partition sendEmail-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 0 rack: null)], epoch=8}}
-2024-08-01 10:53:57 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions assigned: [sendEmail-0]
-2024-08-01 10:54:02 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-01 10:54:02 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-01 10:54:02 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
-2024-08-01 10:54:04 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 896 ms
-2024-08-01 11:00:23 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Revoke previously assigned partitions sendEmail-0
-2024-08-01 11:00:23 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions revoked: [sendEmail-0]
-2024-08-01 11:00:23 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Member consumer-sendEmailGroup-1-41589e72-91b5-467c-9d21-1555aae8eeec sending LeaveGroup request to coordinator localhost:9094 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
-2024-08-01 11:00:23 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
-2024-08-01 11:00:23 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
-2024-08-01 11:00:23 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Unsubscribed all topics or patterns and assigned partitions
-2024-08-01 11:00:23 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
-2024-08-01 11:00:23 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
-2024-08-01 11:00:23 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
-2024-08-01 11:00:23 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-08-01 11:00:23 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
-2024-08-01 11:00:23 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-sendEmailGroup-1 unregistered
-2024-08-01 11:00:23 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: Consumer stopped
-2024-08-01 11:00:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-01 11:00:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-08-01 11:00:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-08-01 11:00:37 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-01 11:00:37 INFO  c.h.project_SB.ProjectSbApplication - Starting ProjectSbApplication using Java 21.0.3 with PID 3116 (E:\project_SB\target\classes started by nguye in E:\project_SB)
-2024-08-01 11:00:37 INFO  c.h.project_SB.ProjectSbApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 476 ms. Found 1 Elasticsearch repository interface.
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Reactive Elasticsearch repository interfaces.
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-01 11:00:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
-2024-08-01 11:00:44 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
-2024-08-01 11:00:44 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2024-08-01 11:00:44 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-01 11:00:44 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-01 11:00:45 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-01 11:00:45 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7032 ms
-2024-08-01 11:00:45 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-01 11:00:45 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.9.Final
-2024-08-01 11:00:46 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-01 11:00:47 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-01 11:00:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-08-01 11:00:48 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@231d3ce
-2024-08-01 11:00:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-08-01 11:00:51 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-01 11:00:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-01 11:00:55 WARN  org.elasticsearch.client.RestClient - request [HEAD http://localhost:9200/products] returned 1 warnings: [299 Elasticsearch-7.17.9-ef48222227ee6b9e70e502f0f0daa52435ee634d "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
-2024-08-01 11:00:56 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-01 11:00:57 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1313dea8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74bca236, org.springframework.security.web.context.SecurityContextHolderFilter@34989ceb, org.springframework.security.web.header.HeaderWriterFilter@307ca947, org.springframework.web.filter.CorsFilter@526fbb80, org.springframework.security.web.authentication.logout.LogoutFilter@383c94ed, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@1da77a43, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9c88323, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a03c4bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33dcbdc2, org.springframework.security.web.access.ExceptionTranslationFilter@8d40f07, org.springframework.security.web.access.intercept.AuthorizationFilter@f573dcb]
-2024-08-01 11:00:58 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2024-08-01 11:00:59 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path ''
-2024-08-01 11:00:59 INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = earliest
-	bootstrap.servers = [localhost:9094]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-sendEmailGroup-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = sendEmailGroup
-	group.instance.id = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
-
-2024-08-01 11:01:01 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.2
-2024-08-01 11:01:01 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: c4deed513057c94e
-2024-08-01 11:01:01 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1722484861414
-2024-08-01 11:01:01 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Subscribed to topic(s): sendEmail
-2024-08-01 11:01:01 INFO  c.h.project_SB.ProjectSbApplication - Started ProjectSbApplication in 25.371 seconds (process running for 27.471)
-2024-08-01 11:01:02 INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Cluster ID: nyoLJbnpRKqjL0bf_kUMNg
-2024-08-01 11:01:02 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
-2024-08-01 11:01:02 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
-2024-08-01 11:01:02 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: need to re-join with the given member-id: consumer-sendEmailGroup-1-98806e48-2c38-4199-b771-aa89875516ae
-2024-08-01 11:01:02 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-2024-08-01 11:01:02 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
-2024-08-01 11:01:05 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully joined group with generation Generation{generationId=23, memberId='consumer-sendEmailGroup-1-98806e48-2c38-4199-b771-aa89875516ae', protocol='range'}
-2024-08-01 11:01:05 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Finished assignment for group at generation 23: {consumer-sendEmailGroup-1-98806e48-2c38-4199-b771-aa89875516ae=Assignment(partitions=[sendEmail-0])}
-2024-08-01 11:01:05 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully synced group in generation Generation{generationId=23, memberId='consumer-sendEmailGroup-1-98806e48-2c38-4199-b771-aa89875516ae', protocol='range'}
-2024-08-01 11:01:05 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Notifying assignor about the new Assignment(partitions=[sendEmail-0])
-2024-08-01 11:01:05 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Adding newly assigned partitions: sendEmail-0
-2024-08-01 11:01:05 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Setting offset for partition sendEmail-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 0 rack: null)], epoch=8}}
-2024-08-01 11:01:05 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions assigned: [sendEmail-0]
-2024-08-01 11:03:15 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-01 11:03:15 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-01 11:03:15 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
-2024-08-01 11:03:17 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1054 ms
-2024-08-01 11:10:02 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Node -1 disconnected.
-2024-08-01 11:12:11 INFO  c.h.p.c.AuthenticationController - Login request received. You are in the queue....
-2024-08-01 11:12:11 INFO  c.h.p.c.AuthenticationController - Processed login for: admin
-2024-08-01 11:26:50 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Revoke previously assigned partitions sendEmail-0
-2024-08-01 11:26:50 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions revoked: [sendEmail-0]
-2024-08-01 11:26:50 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Member consumer-sendEmailGroup-1-98806e48-2c38-4199-b771-aa89875516ae sending LeaveGroup request to coordinator localhost:9094 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
-2024-08-01 11:26:50 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
-2024-08-01 11:26:50 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
-2024-08-01 11:26:50 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Unsubscribed all topics or patterns and assigned partitions
-2024-08-01 11:26:50 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
-2024-08-01 11:26:50 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
-2024-08-01 11:26:50 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
-2024-08-01 11:26:50 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2024-08-01 11:26:50 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
-2024-08-01 11:26:50 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-sendEmailGroup-1 unregistered
-2024-08-01 11:26:50 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: Consumer stopped
-2024-08-01 11:26:50 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-01 11:26:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-08-01 11:26:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-02-20 12:08:03 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.hungnt.project_SB.ProjectSbApplication.main(ProjectSbApplication.java:10)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:143)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:348)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 30 common frames omitted
