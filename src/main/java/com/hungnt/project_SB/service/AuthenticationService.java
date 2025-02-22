@@ -20,6 +20,8 @@ import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,13 +36,13 @@ import java.util.Date;
 import java.util.Set;
 import java.util.UUID;
 
+@Slf4j
 @Service
+@RequiredArgsConstructor
 public class AuthenticationService {
-    private static final Logger log = LoggerFactory.getLogger(AuthenticationService.class);
-    @Autowired
-    private UserRepository userRepository;
-    @Autowired
-    private InvalidTokenRepository invalidTokenRepository;
+    private final UserRepository userRepository;
+    private final InvalidTokenRepository invalidTokenRepository;
+
     @Value("${jwt.signerkey}")
     protected String SIGNER_KEY;
     @Value("${jwt.valid-duration}")

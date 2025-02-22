@@ -21,9 +21,7 @@ import java.util.Map;
 @Service
 @RequiredArgsConstructor
 public class MailService {
-    @Autowired
     private final JavaMailSender javaMailSender;
-    @Autowired
     private final SpringTemplateEngine springTemplateEngine;
     /*
     Nhan 2 tham so:

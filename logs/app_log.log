@@ -181,3 +181,516 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
 	... 30 common frames omitted
+2025-02-20 12:13:37 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-02-20 12:13:38 INFO  c.h.project_SB.ProjectSbApplication - Starting ProjectSbApplication using Java 21.0.3 with PID 10232 (E:\Project Java Spring Boot\project_SB\target\classes started by nguye in E:\Project Java Spring Boot\project_SB)
+2025-02-20 12:13:38 INFO  c.h.project_SB.ProjectSbApplication - No active profile set, falling back to 1 default profile: "default"
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 169 ms. Found 1 Elasticsearch repository interface.
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:13:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 12:13:41 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2025-02-20 12:13:41 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 4 JPA repository interfaces.
+2025-02-20 12:13:41 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:13:41 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-02-20 12:13:41 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:13:41 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:13:41 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:13:41 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:13:41 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:13:41 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-02-20 12:13:43 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-02-20 12:13:43 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-02-20 12:13:43 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-02-20 12:13:43 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-02-20 12:13:43 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-02-20 12:13:43 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5734 ms
+2025-02-20 12:13:44 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 12:13:44 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.9.Final
+2025-02-20 12:13:44 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-02-20 12:13:45 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 12:13:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-02-20 12:13:45 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@185a0811
+2025-02-20 12:13:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-02-20 12:13:47 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 12:13:49 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 12:13:51 WARN  org.elasticsearch.client.RestClient - request [HEAD http://localhost:9200/products] returned 1 warnings: [299 Elasticsearch-7.17.9-ef48222227ee6b9e70e502f0f0daa52435ee634d "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2025-02-20 12:13:53 WARN  org.elasticsearch.client.RestClient - request [PUT http://localhost:9200/products] returned 1 warnings: [299 Elasticsearch-7.17.9-ef48222227ee6b9e70e502f0f0daa52435ee634d "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2025-02-20 12:13:54 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 12:13:54 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@12f4b3a2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36af93ca, org.springframework.security.web.context.SecurityContextHolderFilter@41861964, org.springframework.security.web.header.HeaderWriterFilter@4928a347, org.springframework.web.filter.CorsFilter@5d7807b0, org.springframework.security.web.authentication.logout.LogoutFilter@5d55eb7a, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@2a882681, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e67df05, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61c8139a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75b994f7, org.springframework.security.web.access.ExceptionTranslationFilter@6662af0a, org.springframework.security.web.access.intercept.AuthorizationFilter@47d0127f]
+2025-02-20 12:13:56 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-02-20 12:13:56 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path ''
+2025-02-20 12:13:56 INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-sendEmailGroup-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = sendEmailGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-02-20 12:13:56 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.2
+2025-02-20 12:13:56 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: c4deed513057c94e
+2025-02-20 12:13:56 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1740028436523
+2025-02-20 12:13:56 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Subscribed to topic(s): sendEmail
+2025-02-20 12:13:56 INFO  c.h.project_SB.ProjectSbApplication - Started ProjectSbApplication in 19.765 seconds (process running for 20.726)
+2025-02-20 12:13:57 INFO  c.h.p.configuration.InitAppConfig - Application initialization successful.
+2025-02-20 12:13:57 WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Error while fetching metadata with correlation id 2 : {sendEmail=UNKNOWN_TOPIC_OR_PARTITION}
+2025-02-20 12:13:57 INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Cluster ID: DG19kx8vSzS9FZekE-DxiA
+2025-02-20 12:13:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:57 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:57 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:58 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:58 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:58 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:58 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:58 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:58 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:58 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:58 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:58 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:59 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:59 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:59 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:59 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:59 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-02-20 12:13:59 INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Client requested disconnect from node 2147483647
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Group coordinator localhost:9094 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Requesting disconnect from last known coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-02-20 12:13:59 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:14:00 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: need to re-join with the given member-id: consumer-sendEmailGroup-1-171f6811-7567-4786-9b2e-63ed69a852bd
+2025-02-20 12:14:00 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-02-20 12:14:00 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:14:03 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully joined group with generation Generation{generationId=1, memberId='consumer-sendEmailGroup-1-171f6811-7567-4786-9b2e-63ed69a852bd', protocol='range'}
+2025-02-20 12:14:03 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Finished assignment for group at generation 1: {consumer-sendEmailGroup-1-171f6811-7567-4786-9b2e-63ed69a852bd=Assignment(partitions=[sendEmail-0])}
+2025-02-20 12:14:03 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully synced group in generation Generation{generationId=1, memberId='consumer-sendEmailGroup-1-171f6811-7567-4786-9b2e-63ed69a852bd', protocol='range'}
+2025-02-20 12:14:03 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Notifying assignor about the new Assignment(partitions=[sendEmail-0])
+2025-02-20 12:14:03 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Adding newly assigned partitions: sendEmail-0
+2025-02-20 12:14:03 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Found no committed offset for partition sendEmail-0
+2025-02-20 12:14:03 INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting offset for partition sendEmail-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 0 rack: null)], epoch=0}}.
+2025-02-20 12:14:03 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions assigned: [sendEmail-0]
+2025-02-20 12:14:16 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-20 12:14:16 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-02-20 12:14:16 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-02-20 12:14:17 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 790 ms
+2025-02-20 12:21:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Revoke previously assigned partitions sendEmail-0
+2025-02-20 12:21:35 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions revoked: [sendEmail-0]
+2025-02-20 12:21:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Member consumer-sendEmailGroup-1-171f6811-7567-4786-9b2e-63ed69a852bd sending LeaveGroup request to coordinator localhost:9094 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2025-02-20 12:21:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-02-20 12:21:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-02-20 12:21:35 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Unsubscribed all topics or patterns and assigned partitions
+2025-02-20 12:21:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-02-20 12:21:35 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-02-20 12:21:35 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-02-20 12:21:35 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-02-20 12:21:35 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-02-20 12:21:35 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-sendEmailGroup-1 unregistered
+2025-02-20 12:21:35 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: Consumer stopped
+2025-02-20 12:21:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 12:21:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-02-20 12:21:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-02-20 12:25:10 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-02-20 12:25:10 INFO  c.h.project_SB.ProjectSbApplication - Starting ProjectSbApplication using Java 21.0.3 with PID 420 (E:\Project Java Spring Boot\project_SB\target\classes started by nguye in E:\Project Java Spring Boot\project_SB)
+2025-02-20 12:25:10 INFO  c.h.project_SB.ProjectSbApplication - No active profile set, falling back to 1 default profile: "default"
+2025-02-20 12:25:12 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:25:12 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 234 ms. Found 1 Elasticsearch repository interface.
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 4 JPA repository interfaces.
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.InvalidTokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.PermissionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.ProductESRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.hungnt.project_SB.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-02-20 12:25:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2025-02-20 12:25:15 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2025-02-20 12:25:15 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2025-02-20 12:25:15 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-02-20 12:25:15 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-02-20 12:25:15 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-02-20 12:25:15 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5115 ms
+2025-02-20 12:25:16 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 12:25:16 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.9.Final
+2025-02-20 12:25:16 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-02-20 12:25:16 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 12:25:16 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-02-20 12:25:17 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6abb44cb
+2025-02-20 12:25:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-02-20 12:25:19 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 12:25:19 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 12:25:22 WARN  org.elasticsearch.client.RestClient - request [HEAD http://localhost:9200/products] returned 1 warnings: [299 Elasticsearch-7.17.9-ef48222227ee6b9e70e502f0f0daa52435ee634d "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2025-02-20 12:25:22 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 12:25:23 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3619ecd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7de4bd8f, org.springframework.security.web.context.SecurityContextHolderFilter@36dab184, org.springframework.security.web.header.HeaderWriterFilter@10faebc9, org.springframework.web.filter.CorsFilter@193e65d5, org.springframework.security.web.authentication.logout.LogoutFilter@511f21f9, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@70b2819f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7669d7a2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@729feae8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a97b4b8, org.springframework.security.web.access.ExceptionTranslationFilter@5eb974, org.springframework.security.web.access.intercept.AuthorizationFilter@56f1db5f]
+2025-02-20 12:25:24 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2025-02-20 12:25:24 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path ''
+2025-02-20 12:25:24 INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-sendEmailGroup-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = sendEmailGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-02-20 12:25:25 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.2
+2025-02-20 12:25:25 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: c4deed513057c94e
+2025-02-20 12:25:25 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1740029125336
+2025-02-20 12:25:25 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Subscribed to topic(s): sendEmail
+2025-02-20 12:25:25 INFO  c.h.project_SB.ProjectSbApplication - Started ProjectSbApplication in 16.422 seconds (process running for 17.791)
+2025-02-20 12:25:26 INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Cluster ID: DG19kx8vSzS9FZekE-DxiA
+2025-02-20 12:25:26 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Discovered group coordinator localhost:9094 (id: 2147483647 rack: null)
+2025-02-20 12:25:26 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:25:26 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: need to re-join with the given member-id: consumer-sendEmailGroup-1-ba419d30-0ba9-475f-86a1-661d93d27161
+2025-02-20 12:25:26 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-02-20 12:25:26 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] (Re-)joining group
+2025-02-20 12:25:29 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully joined group with generation Generation{generationId=3, memberId='consumer-sendEmailGroup-1-ba419d30-0ba9-475f-86a1-661d93d27161', protocol='range'}
+2025-02-20 12:25:29 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Finished assignment for group at generation 3: {consumer-sendEmailGroup-1-ba419d30-0ba9-475f-86a1-661d93d27161=Assignment(partitions=[sendEmail-0])}
+2025-02-20 12:25:29 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Successfully synced group in generation Generation{generationId=3, memberId='consumer-sendEmailGroup-1-ba419d30-0ba9-475f-86a1-661d93d27161', protocol='range'}
+2025-02-20 12:25:29 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Notifying assignor about the new Assignment(partitions=[sendEmail-0])
+2025-02-20 12:25:29 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Adding newly assigned partitions: sendEmail-0
+2025-02-20 12:25:29 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Found no committed offset for partition sendEmail-0
+2025-02-20 12:25:29 INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting offset for partition sendEmail-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9094 (id: 0 rack: null)], epoch=2}}.
+2025-02-20 12:25:29 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions assigned: [sendEmail-0]
+2025-02-20 12:32:17 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Revoke previously assigned partitions sendEmail-0
+2025-02-20 12:32:17 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: partitions revoked: [sendEmail-0]
+2025-02-20 12:32:17 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Member consumer-sendEmailGroup-1-ba419d30-0ba9-475f-86a1-661d93d27161 sending LeaveGroup request to coordinator localhost:9094 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2025-02-20 12:32:17 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-02-20 12:32:17 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-02-20 12:32:17 INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Unsubscribed all topics or patterns and assigned partitions
+2025-02-20 12:32:17 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-02-20 12:32:17 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-sendEmailGroup-1, groupId=sendEmailGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-02-20 12:32:17 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-02-20 12:32:17 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-02-20 12:32:17 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-02-20 12:32:17 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-sendEmailGroup-1 unregistered
+2025-02-20 12:32:17 INFO  o.s.k.l.KafkaMessageListenerContainer - sendEmailGroup: Consumer stopped
+2025-02-20 12:32:18 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 12:32:18 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-02-20 12:32:18 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
